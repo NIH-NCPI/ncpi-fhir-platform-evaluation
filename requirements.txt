@@ -1,0 +1,4 @@
+
+fhir-walk @ git+https://github.com/anvilproject/fhir-walk
+ncpi_fhir_utility @ git+https://git@github.com/ncpi-fhir/ncpi-fhir-utility.git
+pytest-json-report
