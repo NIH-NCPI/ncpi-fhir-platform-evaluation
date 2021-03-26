@@ -3,13 +3,13 @@ import logging
 from importlib import reload
 import sys
 from csv import writer
+import pdb
 
 from argparse import ArgumentParser, FileType
 from yaml import safe_load
 from ncpi_fhir_client.fhir_client import FhirClient
 from ncpi_fhir_client import fhir_auth
 from fhir_walk.config import DataConfig 
-from fhir_walk.fhir_host import FhirHost
 
 from fhireval import __name__ as libpath
 import fhireval.test_suite
@@ -42,9 +42,7 @@ def example_config(writer, auth_type = None):
 #                         by the specified host
 #
 # Please note that there can be multiple hosts that use the same authentication
-# mechanism. Users must ensure that each host has a unique "key" 
-
-""", file=writer)
+# mechanism. Users must ensure that each host has a unique "key" """, file=writer)
     for key in modules.keys():
         if auth_type is None or auth_type == key:
             other_entries = {
@@ -78,10 +76,12 @@ def find_test_modules(root_dir=None):
 if __name__ == '__main__':
     host_config_filename = Path("fhir_hosts")
 
-    if not host_config_filename.is_file():
-        with host_config_filename.open('wt') as f:
-            example_config(f)
-        sys.stderr(f"a valid host configuration file, fhir_hosts, must exist in cwd and was not found. An example has been created for you.")
+    if not host_config_filename.is_file() or host_config_filename.stat().st_size==0:
+        example_config(sys.stdout)
+        sys.stderr.write(f"""
+A valid host configuration file, fhir_hosts, must exist in cwd and was not 
+found. Example configuration has been written to stout providing examples 
+for each of the auth types currently supported.\n""")
         sys.exit(1)
 
     host_config = safe_load(host_config_filename.open('rt'))
@@ -136,6 +136,10 @@ if __name__ == '__main__':
                 default='logs',
                 help="Directory for log to be written")
 
+    parser.add_argument("--example_cfg", 
+                action='store_true',
+                help="Write example configuration to stdout and exit. ")
+
     parser.add_argument("-l",
                 "--log-level",
                 choices=log_levels.keys(),
@@ -143,6 +147,10 @@ if __name__ == '__main__':
                 help='The minimum level of detail written to the log')
 
     args = parser.parse_args()
+
+    if args.example_cfg:
+        example_config(sys.stdout)
+        sys.exit(1)
 
     fhireval.test_suite.fhir_client = FhirClient(host_config[args.env])
     #pdb.set_trace()
