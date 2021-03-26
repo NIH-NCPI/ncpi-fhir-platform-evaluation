@@ -51,6 +51,8 @@ class TestResult:
 
     @property
     def percentage_success(self):
+        if self.total == 0:
+            return 0
         return float(self.passed)/self.total
     
     @property

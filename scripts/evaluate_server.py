@@ -1,15 +1,18 @@
 #!/usr/bin/env python
-
+import logging 
+from importlib import reload
 import sys
 from csv import writer
-import logging 
 
 from argparse import ArgumentParser, FileType
-
+from yaml import safe_load
+from ncpi_fhir_client.fhir_client import FhirClient
+from ncpi_fhir_client import fhir_auth
 from fhir_walk.config import DataConfig 
 from fhir_walk.fhir_host import FhirHost
 
 from fhireval import __name__ as libpath
+import fhireval.test_suite
 from fhireval.runner import Runner, __name__ as runner_path
 from collections import defaultdict
 from pathlib import Path
@@ -20,6 +23,36 @@ import pdb
 # Keep all of our tests in child directory, test_suite
 base_dir = Path(libpath)
 suite_path = base_dir / "test_suite"
+
+def example_config(writer, auth_type = None):
+    """Returns a block of text containing one or all possible auth modules example configurations"""
+
+    modules = fhir_auth.get_modules()
+    print(f"""# Example Hosts Configuration.
+# 
+# This is a basic yaml file (yaml.org) where each root level tag represents a 
+# system "name" and it's children's keys represent key/values to assign to a 
+# host configuration which includes the authentication details.
+#
+# All host entries should have the following key/values:
+# host_desc             - This is just a short description which can be used
+#                         for log names or whatnot
+# target_service_url    - This is the URL associated with the actual API 
+# auth_type             - This is the module name for the authentication used
+#                         by the specified host
+#
+# Please note that there can be multiple hosts that use the same authentication
+# mechanism. Users must ensure that each host has a unique "key" 
+
+""", file=writer)
+    for key in modules.keys():
+        if auth_type is None or auth_type == key:
+            other_entries = {
+                "host_desc" : f"Example {key}",
+                "target_service_url": "https://example.fhir.server/R4/fhir"
+            }
+
+            modules[key].example_config(writer, other_entries)
 
 def find_test_modules(root_dir=None):
     """Aggregate the list of test files and aggregate them together with their parent 'module' directory
@@ -43,11 +76,19 @@ def find_test_modules(root_dir=None):
 
 
 if __name__ == '__main__':
-    config = DataConfig.config(hosts_only=True)
+    host_config_filename = Path("fhir_hosts")
+
+    if not host_config_filename.is_file():
+        with host_config_filename.open('wt') as f:
+            example_config(f)
+        sys.stderr(f"a valid host configuration file, fhir_hosts, must exist in cwd and was not found. An example has been created for you.")
+        sys.exit(1)
+
+    host_config = safe_load(host_config_filename.open('rt'))
 
     # Just capture the available environments to let the user
     # make the selection at runtime
-    env_options = config.list_environments()
+    env_options = sorted(host_config.keys())
 
     module_files = find_test_modules()
     module_names = sorted([x for x in module_files.keys()])
@@ -103,17 +144,23 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    fhireval.test_suite.fhir_client = FhirClient(host_config[args.env])
     #pdb.set_trace()
-    config = DataConfig.config(env=args.env)
+    # config = DataConfig.config(env=args.env)
     if args.report_prefix.strip() == "":
-        args.report_prefix = config.host_desc().lower().replace(" ", '_')
+        args.report_prefix = fhireval.test_suite.fhir_client.host_desc.lower().replace(" ", '_')
     
-    logger = logging.basicConfig(filename=f'{args.log_dir}/{args.report_prefix}-evaluation.log',
+    reload(logging)
+    logfn = f'{args.log_dir}/{args.report_prefix}-evaluation.log'
+
+    logging.basicConfig(filename=logfn,
                             filemode='w',
                             format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
                             datefmt='%H:%M:%S',
                             level=log_levels[args.log_level])
-    config.host.init_log()
+    
+    print(f"Logging to '{logfn}', level {args.log_level}.")
+    fhireval.test_suite.fhir_client.init_log()
     if len(args.module) == 0:
         args.module = module_names
 
@@ -124,14 +171,15 @@ if __name__ == '__main__':
         runner = Runner(f"{module_prefix}.{modulename}", module_files[modulename])
         test_runners[runner.set_id] = runner
         total_file_count = total_file_count + len(module_files[modulename])
+        logging.info(f"Module Identified: {modulename} with {len(module_files[modulename])} test sets inside.")
 
     # Make sure we have a report directory
     report_dir = Path(args.out)
     report_dir.mkdir(exist_ok=True, parents=True)
 
     with open(report_dir / f"{args.report_prefix}.csv", 'wt') as outf:
-        logging.info(f"Running {total_file_count} from {len(test_runners)}.")
-        print(f"Running {total_file_count} from {len(test_runners)}.")
+        logging.info(f"Running {total_file_count} test sets from {len(test_runners)} module(s).")
+        print(f"Running {total_file_count} test sets from {len(test_runners)} module(s).")
         runner_flags = ['--json-report-file=none', '-v','--disable-warnings']
         if not args.show_error_trace:
             runner_flags.append('--tb=no')
@@ -168,7 +216,7 @@ if __name__ == '__main__':
         print(summary)
         logging.info(summary)
         rpt_writer.writerow([
-                f"{config.host_desc()} Final Score"] + summary_result.as_row())
+                f"{fhireval.test_suite.fhir_client.host_desc} Final Score"] + summary_result.as_row())
         """
                 'Final Score',
                 total_score,

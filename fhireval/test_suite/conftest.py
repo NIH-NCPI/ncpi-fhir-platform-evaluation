@@ -1,12 +1,16 @@
 import pytest
+"""
 
 from fhir_walk.config import DataConfig
 from fhir_walk.fhir_host import FhirHost
 
-@pytest.fixture
-def config():
-    return DataConfig.config()
+from ncpi_fhir_client.fhir_client import FhirClient
+
+
+    """
+from fhireval.test_suite import get_host
 
 @pytest.fixture
-def host(config):
-    return config.get_host()
+def host():
+    return get_host()
+

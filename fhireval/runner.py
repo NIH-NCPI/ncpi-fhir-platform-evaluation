@@ -39,20 +39,9 @@ class Runner:
             json_reporter = JSONReport()
             pytest.main(args + [str(filename)], plugins=[json_reporter])
             test_result = TestResult(filename, json_reporter.report)
-            #self.test_results[test_result.test_id] = test_result
+
             self.summary_result.add_child(test_result)
 
-            """
-            self.summary_result.test_weight += test_result.test_weight
-            self.summary_result.passed += test_result.passed
-            self.summary_result.failed += test_result.failed
-            self.summary_result.total += test_result.total    
-            """
-
-    # Eventually, I think we want to capture Pass/Fail/Except/etc for every
-    # single test in a way that would let someone do some very detailed comparisons
-    # across different platform. That information should be available from the 
-    # report we get from pytest, so there may need to be some cleanup.
     def report_details(self, report):
         for test_id in sorted(self.filenames.keys()):
             self.summary_result.report_details(self.set_name, report)
@@ -67,24 +56,11 @@ class Runner:
                 report.writerow([self.set_name] + test_result.as_row())
             print(test_result.as_str())
             #total_score += score
-        #perc = total_score / self.total_weight * 100
-        #summary_line = f"{module:<40} {total_score:<6.1f} {self.total_weight:<6.1f} {perc:>6.1f} {self.total_passed:>6} {self.total_failed:>6} {self.total_tested:>6}"
         summary_line = self.summary_result.as_str()
 
         if report:
             report.writerow(self.summary_result.as_row())
-            """
-            report.writerow([
-                self.module_name,
-                'Summary', 
-                total_score,
-                self.total_weight,
-                perc, 
-                self.total_passed,
-                self.total_failed,
-                self.total_tested
-                ])
-                """
+
         print("-" * len(summary_line))
         print(summary_line + "\n")
         return self.summary_result.score()
