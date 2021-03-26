@@ -46,7 +46,7 @@ If you run the script with no fhir_hosts file (or an empty one), the script will
 The authentication mechanics are wrapped inside the [NCPI FHIR Client Library](https://github.com/ncpi-fhir/ncpi-fhir-client). Adding new modules is straightforward: 
 
 1.  Create a file inside the ncpi_fhir_client/fhir_auth directory. Filenames must start with auth_ and should be lowercase and underscores. This is known as [snake case](https://en.wikipedia.org/wiki/Snake_case). 
-2.  Inside this file, create a class named the same as the python file created in #1 using [CameCase](https://en.wikipedia.org/wiki/Camel_case). 
+2.  Inside this file, create a class named the same as the python file created in #1 using [CamelCase](https://en.wikipedia.org/wiki/Camel_case). 
 3.  This class must have the following functions:
     1.  Constructor must accept a dictionary from which any relevant key/values will be found
     2.  update_requst_args must accept the dictionary, request_args, which will be passed on as part of the request. Developers must understand which parts (header, auth, etc) must be updated to support the authentication scheme being built.
