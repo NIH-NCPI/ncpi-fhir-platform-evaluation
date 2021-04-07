@@ -1,7 +1,7 @@
 import pytest
 import pdb
 
-test_id = f"{'2.5.4':10} - CRUD Specimen"
+test_id = f"{'2.5.5':10} - CRUD Specimen"
 
 test_weight = 2
 
