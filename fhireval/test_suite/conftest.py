@@ -10,7 +10,7 @@ from ncpi_fhir_client.fhir_client import FhirClient
     """
 from fhireval.test_suite import get_host
 
-@pytest.fixture
+@pytest.fixture(scope='module')
 def host():
     return get_host()
 
