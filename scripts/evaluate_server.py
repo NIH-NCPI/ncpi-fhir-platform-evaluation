@@ -159,6 +159,9 @@ for each of the auth types currently supported.\n""")
         args.report_prefix = fhireval.test_suite.fhir_client.host_desc.lower().replace(" ", '_')
     
     reload(logging)
+
+    Path(args.log_dir).mkdir(parents=True, exist_ok=True)
+
     logfn = f'{args.log_dir}/{args.report_prefix}-evaluation.log'
 
     logging.basicConfig(filename=logfn,
