@@ -3,7 +3,7 @@ import pdb
 from fhir_walk.model.patient import Patient
 
 from fhir_walk.model import unwrap_bundle
-from fhireval.test_suite.crud import create_patient, example_patient_id, reset_crud_test_data
+from fhireval.test_suite.crud import prep_server
 
 test_id = f"{'2.5.1':<10} - CRUD Research Study "
 
