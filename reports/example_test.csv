@@ -1,0 +1,45 @@
+Module_Name,Test_ID,Score,Total_Possible_Score,Perc,#Tests_Passed,#Tests_Failed,#Total_Test_Count
+Cap. Statement,2.1.1      - Resource Interaction,1.7777777777777777,2,0.8888888888888888,832,104,936
+Cap. Statement,"2.1.2      - Conditional Create, Upd & Del",4.444444444444445,5,0.8888888888888888,104,13,117
+Cap. Statement,2.1.3      - Search Includes,1.1111111111111112,2,0.5555555555555556,65,52,117
+Cap. Statement,2.1.4      - Resource Search Params,0.717948717948718,2,0.358974358974359,42,75,117
+Cap. Statement,2.1        - Cap. Statement (Summary),8.051282051282051,11,0.8104118104118104,1043,244,1287
+Search,2.2.1.1    - Core FHIR Search,15.0,15,1.0,1,0,1
+Search,2.2.1.2    - Search Modifiers and Prefix,0.0,15,0.0,0,4,4
+Search,2.2.1.3    - Hierarchical Search,0.0,15,0.0,0,2,2
+Search,2.2.1.4    - Chaining,0.0,8,0.0,0,2,2
+Search,2.2.1.5    - Reverse Chaining,0.0,5,0.0,0,2,2
+Search,2.2.1.6    - Missingness,0.0,8,0.0,0,1,1
+Search,2.2.1.7    - Composite Search,0.0,9,0.0,0,2,2
+Search,2.2.1.8    - _query,0.0,8,0.0,0,2,2
+Search,2.2.1.9.1  - Sorting,0.0,3,0.0,0,2,2
+Search,2.2.1.9.2  - Paging,0.0,8,0.0,0,2,2
+Search,2.2.1      - Search (Summary),15.0,94,0.05,1,19,20
+Search Params,2.2.2.1    - Basic Search Params,0.0,3,0.0,0,2,2
+Search Params,2.2.2      - Search Params (Summary),0.0,3,0.0,0,2,2
+Profiling,2.3.1      - Profile Creation,0.0,25,0.0,0,1,1
+Profiling,2.3.1      - Profile Validation,0.0,25,0.0,0,1,1
+Profiling,2.3.3      - Profile Snapshot,0.0,10,0.0,0,1,1
+Profiling,2.3        - Profiling (Summary),0.0,60,0.0,0,3,3
+Extensions,2.4.1      - Extension Creation,0.0,2,0.0,0,1,1
+Extensions,2.4.2      - Extensions Validated,0.0,4,0.0,0,1,1
+Extensions,2.4.3      - Extensions Queried,0.0,5,0.0,0,1,1
+Extensions,2.4        - Extensions (Summary),0.0,11,0.0,0,3,3
+CRUD,2.5.1      - CRUD Research Study ,0.0,2,0.0,0,5,5
+CRUD,2.5.2      - CRUD Patient,2.0,2,1.0,5,0,5
+CRUD,2.5.3      - CRUD Research Subject,0.0,2,0.0,0,5,5
+CRUD,2.5.5      - CRUD Specimen,0.0,2,0.0,0,5,5
+CRUD,2.5        - CRUD (Summary),2.0,8,0.25,5,15,20
+Bulk Export,2.6.1      - Bulk Export ,0.0,2,0.0,0,1,1
+Bulk Export,2.6        - Bulk Export (Summary),0.0,2,0.0,0,1,1
+Terminologies,2.7.1      - Validate Terms at Load,0.0,2,0.0,0,1,1
+Terminologies,2.7.2      - Support Ext. Term Server,0.0,2,0.0,0,1,1
+Terminologies,2.7.3      - Can Be Term Server,0.0,2,0.0,0,1,1
+Terminologies,2.7        - Terminologies (Summary),0.0,6,0.0,0,3,3
+ConceptMap,2.8.1      - Create ConceptMap,2.0,2,1.0,1,0,1
+ConceptMap,2.8.2      - ConceptMap Translate,2.0,2,1.0,1,0,1
+ConceptMap,2.8        - ConceptMap (Summary),4.0,4,1.0,2,0,2
+Custom Ops,2.9.1      - Define Custom Operations,0.0,2,0.0,0,1,1
+Custom Ops,2.9.2      - Custom Ops Outcome,0.0,2,0.0,0,1,1
+Custom Ops,2.9        - Custom Ops (Summary),0.0,4,0.0,0,2,2
+example_test Final Score,Final Score,19.614529914529914,203,0.7825763216679077,1051,292,1343
