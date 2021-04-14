@@ -30,25 +30,36 @@ from pathlib import Path
 from collections import defaultdict
 import json
 
-# DO NOT import this. Just use the load_test_data function. It won't reload if the 
-# data has already been loaded. 
+# DO NOT import this. Just use the load_test_data function. It won't reload if the
+# data has already been loaded.
 _resource_data = None
 
 # Helper script to provide an easy way to clear out old test data
 def delete_content_for_resource(host, resource_type, records):
-    """host - will be a fixture 
-       resource_type - Patient, etc
-       records - one ore more fhir 'objects'. This function must identify the
-                 matches, get IDs and delete them"""
+    """Wrapper for deleting a resource object if it exists
+
+    This function will identify the matches, get IDs and delete them. It
+    is safe to call if the records do not exist (so it is suitable for
+    cleanup prior to beginning tests in case some previous test data is
+    left behind)
+        :param host: Fixture referencing the fhirclient object
+        :type host: ncpi-fhir-client
+        :param resource_type: Which resource type is to be deleted (Patient, ResarchStudy, etc)
+        :type resource_type: String
+        :param records: one or more fhir objects which conform to the specified resource_type
+        :type records: list of dictionary objects
+    """
 
     # We may need slightly different ways to delete some of the resource types
-    if resource_type in ['Patient']:
+    if resource_type in ["Patient"]:
         for record in records:
-            for response in host.get(f"{resource_type}?identifier={record['identifier'][0]['system']}|{record['identifier'][0]['value']}").entries:
-                if 'resource' in response:
-                    id = response['resource']['id']
+            for response in host.get(
+                f"{resource_type}?identifier={record['identifier'][0]['system']}|{record['identifier'][0]['value']}"
+            ).entries:
+                if "resource" in response:
+                    id = response["resource"]["id"]
                     delete_result = host.delete_by_record_id(resource_type, int(id))
-   
+
 
 def load_test_data():
     global _resource_data
@@ -56,18 +67,18 @@ def load_test_data():
     if _resource_data is None:
         _resource_data = defaultdict(lambda: defaultdict(list))
 
-        # Discover our test data and organize it into a nice litle dict with the 
+        # Discover our test data and organize it into a nice litle dict with the
         # following structure:  groupname => resource_name => [fhir_compatible_dicts]
         files = pkg_resources.resource_listdir(__name__, "")
         for fn in files:
             if Path(fn).suffix.lower() == ".json":
-                content = json.loads(pkg_resources.resource_string(__name__, fn).decode("utf-8"))
+                content = json.loads(
+                    pkg_resources.resource_string(__name__, fn).decode("utf-8")
+                )
                 print(content.keys())
-                groupname = content['groupname']
-                for resource in content['resources'].keys():
-                    for record in content['resources'][resource]:
-                        _resource_data['_ALL'][resource].append(record)
+                groupname = content["groupname"]
+                for resource in content["resources"].keys():
+                    for record in content["resources"][resource]:
+                        _resource_data["_ALL"][resource].append(record)
                         _resource_data[groupname][resource].append(record)
     return _resource_data
-
-
