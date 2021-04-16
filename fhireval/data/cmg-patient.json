@@ -1,0 +1,329 @@
+{
+  "groupname": "CMG-Examples",
+  "resources": {
+    "Patient": [
+      {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:ncpi:id:unique-string",
+            "value": "ct.patient01"
+          },
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "FHIR-CMG-TEST.ctpatient01"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Reported Unknown:Italian"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "valueCoding": {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                  "code": "UNK",
+                  "display": "Unknown"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Reported Unknown:Italian"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
+            "extension": [ {
+              "url": "target",
+              "valueReference": {
+                "reference": "Patient/4727"
+              }
+            }, {
+              "url": "targetPath",
+              "valueString": "birthDate"
+            }, {
+              "url": "relationship",
+              "valueCode": "after"
+            }, {
+              "url": "offset",
+              "valueDuration": {
+                "value": 31.0,
+                "unit": "a",
+                "system": "http://unitsofmeasure.org",
+                "code": "years"
+              }
+            } ]
+          } 
+        ],         
+        "gender": "male"
+      },
+      {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2028-9",
+              "display": "Asian"
+            }
+          }, {
+            "url": "text",
+            "valueString": "Asian:Middle Eastern (from the United Arab Emirates)"
+          } ]
+        } ],
+        "identifier": [
+          {
+            "system": "urn:ncpi:id:unique-string",
+            "value": "ct.patient09"
+          },
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "FHIR-CMG-TEST.ctpatient09"
+          }, {
+          "system": "https://dbgap-api.ncbi.nlm.nih.gov/participants?study_id=phs000711&external_id=",
+          "value": "1144303"
+        } ],
+        "gender": "female"
+      },
+      {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2028-9",
+              "display": "Asian"
+            }
+          }, {
+            "url": "text",
+            "valueString": "Asian:Middle Eastern (from the United Arab Emirates)"
+          } ]
+        }, {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
+          "extension": [ {
+            "url": "target",
+            "valueReference": {
+              "reference": "Patient/4727"
+            }
+          }, {
+            "url": "targetPath",
+            "valueString": "birthDate"
+          }, {
+            "url": "relationship",
+            "valueCode": "after"
+          }, {
+            "url": "offset",
+            "valueDuration": {
+              "value": 42.0,
+              "unit": "a",
+              "system": "http://unitsofmeasure.org",
+              "code": "years"
+            }
+          } ]
+        } ],
+        "identifier": [ 
+          {
+            "system": "urn:ncpi:id:unique-string",
+            "value": "ct.patient07"
+          },
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "FHIR-CMG-TEST.ctpatient07"
+          }, {
+          "system": "https://dbgap-api.ncbi.nlm.nih.gov/participants?study_id=phs000711&external_id=",
+          "value": "1144301"
+        } ],
+        "gender": "male"
+      }, {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2028-9",
+              "display": "Asian"
+            }
+          }, {
+            "url": "text",
+            "valueString": "Asian:Middle Eastern (from the United Arab Emirates)"
+          } ]
+        } ],
+        "identifier": [ {
+            "system": "urn:ncpi:id:unique-string",
+            "value": "ct.patient08"
+          },
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "FHIR-CMG-TEST.ctpatient08"
+          }, {
+          "system": "https://dbgap-api.ncbi.nlm.nih.gov/participants?study_id=phs000711&external_id=",
+          "value": "1144302"
+        } ],
+        "gender": "male"
+      }, {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2054-5",
+              "display": "Black or African American"
+            }
+          }, {
+            "url": "text",
+            "valueString": "Black or African American:"
+          } ]
+        } ],
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient06"
+        },
+        {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST.ctpatient06"
+        }],
+        "gender": "female"
+      }, {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2054-5",
+              "display": "Black or African American"
+            }
+          }, {
+            "url": "text",
+            "valueString": "Black or African American:"
+          } ]
+        } ],
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient05"
+        },
+        {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST.ctpatient05"
+        } ],
+        "gender": "male"
+      }, {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2054-5",
+              "display": "Black or African American"
+            }
+          }, {
+            "url": "text",
+            "valueString": "Black or African American:"
+          } ]
+        } ],
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient04"
+        },
+        {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST.ctpatient04"
+        }, {
+          "system": "https://dbgap-api.ncbi.nlm.nih.gov/participants?study_id=phs000711&external_id=",
+          "value": "dbgap03"
+        } ],
+        "gender": "female"
+      }, {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2106-3",
+              "display": "White"
+            }
+          }, {
+            "url": "text",
+            "valueString": "White:Italian"
+          } ]
+        } ],
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient03"
+        },
+        {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST.ctpatient03"
+        }, {
+          "system": "https://dbgap-api.ncbi.nlm.nih.gov/participants?study_id=phs000711&external_id=",
+          "value": "dbgap02"
+        } ],
+        "gender": "female"
+      }, {
+        "resourceType": "Patient",
+        "extension": [ {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+          "extension": [ {
+            "url": "ombCategory",
+            "valueCoding": {
+              "system": "urn:oid:2.16.840.1.113883.6.238",
+              "code": "2106-3",
+              "display": "White"
+            }
+          }, {
+            "url": "text",
+            "valueString": "White:Italian"
+          } ]
+        } ],
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient02"
+        },
+        {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST.ctpatient02"
+        }, {
+          "system": "https://dbgap-api.ncbi.nlm.nih.gov/participants?study_id=phs000711&external_id=",
+          "value": "dbgap01"
+        } ],
+        "gender": "male"
+      }
+    ]
+  }
+}
