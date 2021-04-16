@@ -1,0 +1,163 @@
+{
+	"groupname": "CMG-Examples",
+	"resources": {
+	  "ResearchStudy": [
+      {
+        "resourceType": "ResearchStudy",
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "FHIR-CMG-TEST"
+        } ],
+        "title": "FHIR-CMG-TEST",
+        "status": "completed"
+      }
+    ],
+    "ResearchSubject": [
+      {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient09"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient09"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient09"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:id:unique-string",
+          "value": "ct.patient08"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient08"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient08"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient07"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient07"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient07"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient06"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient06"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient06"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient05"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient05"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient05"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient04"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient04"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient04"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient03"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient03"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient03"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient02"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient02"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient02"
+        }
+      }, {
+        "resourceType": "ResearchSubject",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "ct.patient01"
+        }, {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-CMG-TEST|ct.patient01"
+        } ],
+        "status": "on-study",
+        "study": {
+          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+        },
+        "individual": {
+          "reference": "Patient?identifier=ct.patient01"
+        }
+      }
+    ]
+  }
+}

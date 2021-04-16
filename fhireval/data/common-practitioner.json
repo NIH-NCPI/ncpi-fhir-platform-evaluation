@@ -1,0 +1,163 @@
+{
+  "groupname": "Common-Examples",
+  "resources": {
+    "Organization": [ {
+      "resourceType": "Organization",
+        "identifier": [ {
+          "system": "urn:ncpi:unique-string",
+          "value": "FHIR-TEST-ORG"
+        } ],
+        "active": true,
+        "name": "FHIR-Org"
+      }
+		],
+    "Practitioner": [ {
+      "resourceType": "Practitioner",
+      "active": true,
+      "name": [{
+        "use": "official",
+        "text": "Jane Samantha Smith",
+        "family": "Smith",
+        "given": [
+          "Jane",
+          "Samantha"
+        ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "(555) 555-5555",
+        "use": "work",
+        "rank": 1
+      } ],
+      "address": [ {
+        "use": "work",
+        "type": "both",
+        "text": "3401 Civic Center Blvd., Philadelphia, PA 19104",
+        "line": [
+          "3401 Civic Center Blvd."
+        ],
+        "city": "Philadelphia",
+        "state": "PA",
+        "postalCode": "19104"
+      } ],
+      "gender": "female"
+    } ],
+    "PractitionerRole" : [
+      {
+        "resourceType": "PractitionerRole",
+        "active": true,
+        "practitioner": {
+          "reference": "Practitioner/practitioner-example-1"
+        },
+        "organization": {
+          "reference": "Organization/organization-example-1"
+        },
+        "code": [ {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+              "code": "researcher",
+              "display": "Researcher"
+            }
+          ],
+          "text": "Principal Investigator"
+        }],
+        "telecom": [{
+          "system": "phone",
+          "value": "(555) 555-5555",
+          "use": "work",
+          "rank": 1
+        } ]
+      }
+    ],
+    "DocumentReference": [  
+      {
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "content": [
+          {
+            "attachment": {
+              "url": "drs://example.com/ga4gh/drs/v1/objects/0f8c27b9-3300-4249-bb28-f49ffb80e277"
+            }
+          }
+        ]
+      }
+    ],
+    "Task" : [{
+      "resourceType": "Task",
+      "identifier": [
+        {
+          "use": "official",
+          "system": "http:/goodhealth.org/identifiers",
+          "value": "20170201-002"
+        }
+      ],
+      "groupIdentifier": {
+        "use": "official",
+        "system": "http:/goodhealth.org/accession/identifiers",
+        "value": "G20170201-001"
+      },
+      "status": "completed",
+      "intent": "filler-order",
+      "priority": "routine",
+      "code": {
+        "text": "Specimen Collection"
+      },
+      "focus": {
+        "display": "BloodDraw ServiceRequest"
+      },
+      "for": {
+        "reference": "Patient/example"
+      },
+      "requester": {
+        "reference": "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"
+      },
+      "output": [
+        {
+          "type": {
+            "text": "collected specimen"
+          },
+          "valueReference": {
+            "reference": "Specimen/101"
+          }
+        }
+      ]
+    }],
+    "Group": [{
+      "resourceType": "Group",
+      "identifier": [
+        {
+          "system": "http://someveterinarianclinic.org/fhir/NamingSystem/herds",
+          "value": "12345"
+        }
+      ],
+      "type": "animal",
+      "actual": true,
+      "code": {
+        "text": "Horse"
+      },
+      "name": "John's herd",
+      "quantity": 25,
+      "characteristic": [
+        {
+          "code": {
+            "text": "gender"
+          },
+          "valueCodeableConcept": {
+            "text": "mixed"
+          },
+          "exclude": false
+        },
+        {
+          "code": {
+            "text": "owner"
+          },
+          "valueCodeableConcept": {
+            "text": "John Smith"
+          },
+          "exclude": false
+        }
+      ]
+    }]
+  }
+}
