@@ -18,9 +18,7 @@ def test_create_research_document_ref(host, prep_server):
 
     print(prep_server['Common-Examples']['DocumentReference'])
     example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
-    response = host.post('DocumentReference',
-                         example_document_ref,
-                         validate_only=False)
+    response = host.post('DocumentReference', example_document_ref, validate_only=False)
 
     assert response['status_code'] == 201, 'CREATE success'
     example_document_ref_id = response['response']['id']
@@ -31,15 +29,13 @@ def test_read_research_document_ref(host, prep_server):
 
     example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
 
-    document_ref_query = host.get(
-        f"DocumentReference/{example_document_ref_id}").entries
+    document_ref_query = host.get(f"DocumentReference/{example_document_ref_id}").entries
     assert len(document_ref_query) == 1, "READ Success and only one was found"
 
     # Just make sure we got what we expected
-    assert example_document_ref['status'] == document_ref_query[0][
-        'status'], 'Verify Identifier matches'
-    assert example_document_ref['content'][0]['attachment'][
-        'url'] == document_ref_query[0]['content'][0]['attachment']['url']
+    assert example_document_ref['status'] == document_ref_query[0]['status'], 'Verify Identifier matches'
+    assert example_document_ref['content'][0]['attachment']['url'] == document_ref_query[0]['content'][0]['attachment'][
+        'url']
 
 
 def test_update_research_document_ref(host, prep_server):
@@ -48,18 +44,14 @@ def test_update_research_document_ref(host, prep_server):
     example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
     altered_document_ref = example_document_ref.copy()
 
-    altered_document_ref['content'][0]['attachment'][
-        'url'] = 'drs:example.com/12/23/45'
+    altered_document_ref['content'][0]['attachment']['url'] = 'drs:example.com/12/23/45'
     altered_document_ref['id'] = example_document_ref_id
-    result = host.update('DocumentReference', example_document_ref_id,
-                         altered_document_ref)
+    result = host.update('DocumentReference', example_document_ref_id, altered_document_ref)
     assert result['status_code'] == 200
 
-    document_ref_qry = host.get(
-        f"DocumentReference/{example_document_ref_id}").entries
+    document_ref_qry = host.get(f"DocumentReference/{example_document_ref_id}").entries
     assert len(document_ref_qry) == 1, "READ success and only one was found"
-    assert document_ref_qry[0]['content'][0]['attachment'][
-        'url'] == 'drs:example.com/12/23/45'
+    assert document_ref_qry[0]['content'][0]['attachment']['url'] == 'drs:example.com/12/23/45'
 
 
 def test_patch_research_document_ref(host, prep_server):
@@ -67,8 +59,7 @@ def test_patch_research_document_ref(host, prep_server):
     example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
 
     patch_ops = [{"op": "replace", "path": "/status", "value": "superseded"}]
-    result = host.patch('DocumentReference', example_document_ref_id,
-                        patch_ops)
+    result = host.patch('DocumentReference', example_document_ref_id, patch_ops)
     assert result['status_code'] == 200
     document_ref_qry = result['response']
     assert document_ref_qry['status'] == 'superseded'
@@ -79,6 +70,5 @@ def test_delete_research_document_ref(host, prep_server):
 
     example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
 
-    delete_result = host.delete_by_record_id('DocumentReference',
-                                             example_document_ref_id)
+    delete_result = host.delete_by_record_id('DocumentReference', example_document_ref_id)
     assert delete_result['status_code'] == 200
