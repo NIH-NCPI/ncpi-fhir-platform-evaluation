@@ -26,7 +26,6 @@ def test_read_research_study(host, prep_server):
     global example_organization_id
 
     example_org = prep_server['CMG-Examples']['Organization'][0]
-    example_identifier = example_org['identifier'][0]
     study_query = host.get(f"Organization/{example_organization_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -53,7 +52,6 @@ def test_update_research_study(host, prep_server):
 
 def test_patch_research_study(host, prep_server):
     global example_organization_id
-    example_org = prep_server['CMG-Examples']['Organization'][0]
 
     patch_ops = [{
         "op": "replace",

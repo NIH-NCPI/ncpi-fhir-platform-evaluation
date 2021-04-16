@@ -61,7 +61,6 @@ def test_update_research_practitioner(host, prep_server):
 
 def test_patch_research_practitioner(host, prep_server):
     global example_practitioner_id
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
 
     patch_ops = [{"op": "replace", "path": "/gender", "value": "male"}]
     result = host.patch('Practitioner', example_practitioner_id, patch_ops)

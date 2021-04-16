@@ -32,7 +32,6 @@ def test_create_specimen(host, prep_server):
 def test_read_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
     example_specimen = prep_server['CMG-Examples']['Specimen'][0]
 
     study_query = host.get(f"Specimen/{example_specimen_id}").entries
@@ -46,7 +45,6 @@ def test_read_specimen(host, prep_server):
 def test_update_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
     example_specimen = prep_server['CMG-Examples']['Specimen'][0]
 
     altered_specimen = example_specimen.copy()
@@ -62,9 +60,6 @@ def test_update_specimen(host, prep_server):
 
 def test_patch_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
-
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_specimen = prep_server['CMG-Examples']['Specimen'][0]
 
     patch_ops = [{"op": "add", "path": "/status", "value": "entered-in-error"}]
 

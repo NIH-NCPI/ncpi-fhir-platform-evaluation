@@ -27,7 +27,6 @@ def test_read_group(host, prep_server):
     global example_group_id
 
     example_group = prep_server['Common-Examples']['Group'][0]
-    example_identifier = example_group['identifier'][0]
     study_query = host.get(f"Group/{example_group_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -55,7 +54,6 @@ def test_update_group(host, prep_server):
 
 def test_patch_group(host, prep_server):
     global example_group_id
-    example_group = prep_server['Common-Examples']['Group'][0]
 
     patch_ops = [{"op": "replace", "path": "/name", "value": "YANN"}]
     result = host.patch('Group', example_group_id, patch_ops)

@@ -17,8 +17,7 @@ def test_create_research_document_ref(host, prep_server):
     global example_document_ref_id
 
     print(prep_server['Common-Examples']['DocumentReference'])
-    example_document_ref = prep_server['Common-Examples']['DocumentReference'][
-        0]
+    example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
     response = host.post('DocumentReference',
                          example_document_ref,
                          validate_only=False)
@@ -30,8 +29,7 @@ def test_create_research_document_ref(host, prep_server):
 def test_read_research_document_ref(host, prep_server):
     global example_document_ref_id
 
-    example_document_ref = prep_server['Common-Examples']['DocumentReference'][
-        0]
+    example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
 
     document_ref_query = host.get(
         f"DocumentReference/{example_document_ref_id}").entries
@@ -47,8 +45,7 @@ def test_read_research_document_ref(host, prep_server):
 def test_update_research_document_ref(host, prep_server):
     global example_document_ref_id
 
-    example_document_ref = prep_server['Common-Examples']['DocumentReference'][
-        0]
+    example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
     altered_document_ref = example_document_ref.copy()
 
     altered_document_ref['content'][0]['attachment'][
@@ -67,8 +64,7 @@ def test_update_research_document_ref(host, prep_server):
 
 def test_patch_research_document_ref(host, prep_server):
     global example_document_ref_id
-    example_document_ref = prep_server['Common-Examples']['DocumentReference'][
-        0]
+    example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
 
     patch_ops = [{"op": "replace", "path": "/status", "value": "superseded"}]
     result = host.patch('DocumentReference', example_document_ref_id,
@@ -81,8 +77,7 @@ def test_patch_research_document_ref(host, prep_server):
 def test_delete_research_document_ref(host, prep_server):
     global example_document_ref_id
 
-    example_document_ref = prep_server['Common-Examples']['DocumentReference'][
-        0]
+    example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
 
     delete_result = host.delete_by_record_id('DocumentReference',
                                              example_document_ref_id)

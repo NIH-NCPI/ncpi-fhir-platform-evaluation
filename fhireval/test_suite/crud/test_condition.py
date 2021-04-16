@@ -64,7 +64,6 @@ def test_patch_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
     example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_condition = prep_server['CMG-Examples']['Condition'][0]
 
     patch_ops = [{
         "op": "replace",

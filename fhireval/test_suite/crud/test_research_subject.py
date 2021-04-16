@@ -46,8 +46,6 @@ def test_create_research_subject(host, prep_server):
 def test_read_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
     example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
     study_query = host.get(f"ResearchSubject/{example_subject_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
@@ -60,8 +58,6 @@ def test_read_research_subject(host, prep_server):
 def test_update_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
     example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
 
     altered_subject = example_subject.copy()
@@ -78,10 +74,6 @@ def test_update_research_subject(host, prep_server):
 
 def test_patch_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
-
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
-    example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
 
     patch_ops = [{"op": "replace", "path": "/status", "value": "off-study"}]
     result = host.patch('ResearchSubject', example_subject_id, patch_ops)

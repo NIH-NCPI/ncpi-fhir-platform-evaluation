@@ -69,8 +69,6 @@ def test_read_research_practitioner_role(host, prep_server):
 def test_update_research_practitioner_role(host, prep_server):
     global example_practitioner_id, example_practitioner_role_id, example_organization_id
 
-    example_organization = prep_server['Common-Examples']['Organization'][0]
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
     example_practitioner_role = prep_server['Common-Examples'][
         'PractitionerRole'][0]
 
@@ -92,11 +90,6 @@ def test_update_research_practitioner_role(host, prep_server):
 def test_patch_research_practitioner_role(host, prep_server):
     global example_practitioner_id, example_practitioner_role_id, example_organization_id
 
-    example_organization = prep_server['Common-Examples']['Organization'][0]
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
-    example_practitioner_role = prep_server['Common-Examples'][
-        'PractitionerRole'][0]
-
     patch_ops = [{"op": "replace", "path": "/active", "value": False}]
     result = host.patch('PractitionerRole', example_practitioner_role_id,
                         patch_ops)
@@ -107,11 +100,6 @@ def test_patch_research_practitioner_role(host, prep_server):
 
 def test_delete_research_practitioner_role(host, prep_server):
     global example_practitioner_id, example_practitioner_role_id, example_organization_id
-
-    example_practitioner_role = prep_server['Common-Examples'][
-        'PractitionerRole'][0]
-
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
 
     delete_result = host.delete_by_record_id('PractitionerRole',
                                              example_practitioner_role_id)
