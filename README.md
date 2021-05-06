@@ -5,6 +5,10 @@ This test suite will assume that the endpoint exists and that security tokens/co
 
 The test framework will provide a flexible host configuration that can be extended to support both cloud and local platform authentication.
 
+# Installation
+There are a small number of library dependencies. To install them, run the following command within the top level directory of the repository:
+    pip install -r requrements.txt
+
 # Standard Linux Help
 Users can always get a listing of options using the argument --help
 
