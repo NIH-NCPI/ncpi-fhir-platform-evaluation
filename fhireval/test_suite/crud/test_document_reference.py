@@ -1,8 +1,6 @@
 import pytest
 import pdb
-from fhir_walk.model.patient import Patient
 
-from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
 
 test_id = f"{'2.5.11':<10} - CRUD Document Reference"
@@ -16,8 +14,14 @@ example_document_ref_id = None
 def test_create_research_document_ref(host, prep_server):
     global example_document_ref_id
 
-    print(prep_server['Common-Examples']['DocumentReference'])
+    # pdb.set_trace()
+    example_patient = prep_server['CMG-Examples']['Patient'][0]
+    response = host.post('Patient', example_patient, validate_only=False)
+    example_patient_id = response['response']['id']
+
     example_document_ref = prep_server['Common-Examples']['DocumentReference'][0]
+    example_document_ref['subject'][
+        'reference'] = f"Patient/{example_patient_id}"
     response = host.post('DocumentReference', example_document_ref, validate_only=False)
 
     assert response['status_code'] == 201, 'CREATE success'
