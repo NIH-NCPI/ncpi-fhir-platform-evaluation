@@ -9,6 +9,11 @@ The test framework will provide a flexible host configuration that can be extend
 There are a small number of library dependencies. To install them, run the following command within the top level directory of the repository:
     pip install -r requrements.txt
 
+Once this is done, you'll need to then install the program itself:
+    python setup.py develop
+
+Develop can be any of the standard setup.py arguments (install, etc), however, I find it easier to debug using the "develop" option. Once the test suite is more stable, it will probably be preferable to not use the develop option.
+
 # Standard Linux Help
 Users can always get a listing of options using the argument --help
 
