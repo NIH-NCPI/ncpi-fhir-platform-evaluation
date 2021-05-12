@@ -5,14 +5,20 @@
       "resourceType": "Organization",
         "identifier": [ {
           "system": "urn:ncpi:unique-string",
-          "value": "FHIR-TEST-ORG"
+          "value": "FHIR-TEST-ORG-2"
         } ],
         "active": true,
-        "name": "FHIR-Org"
+        "name": "FHIR-Org-2"
       }
 		],
     "Practitioner": [ {
       "resourceType": "Practitioner",
+      "identifier": [
+        {
+          "system": "urn:ncpi:unique-string",
+          "value": "Jane-Smith"
+        }
+      ],
       "active": true,
       "name": [{
         "use": "official",
@@ -46,11 +52,17 @@
       {
         "resourceType": "PractitionerRole",
         "active": true,
+        "identifier": [
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "Researcher"
+          }
+        ],
         "practitioner": {
-          "reference": "Practitioner/practitioner-example-1"
+          "reference": "Practitioner/Jane-Smith"
         },
         "organization": {
-          "reference": "Organization/organization-example-1"
+          "reference": "Organization/FHIR-TEST-ORG-2"
         },
         "code": [ {
           "coding": [
@@ -74,6 +86,15 @@
       {
         "resourceType": "DocumentReference",
         "status": "current",
+        "identifier": [
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "drs-document-reference-1"
+          }
+        ],
+        "subject":  {
+          "reference": "Patient/ct.patient08"
+        },
         "content": [
           {
             "attachment": {
@@ -101,16 +122,20 @@
       "intent": "filler-order",
       "priority": "routine",
       "code": {
-        "text": "Specimen Collection"
+        "coding": [ {
+          "system": "http://www.ama-assn.org/go/cpt",
+          "code": "36415",
+          "display": "Specimen Collection"
+        }]
       },
       "focus": {
         "display": "BloodDraw ServiceRequest"
       },
       "for": {
-        "reference": "Patient/example"
+        "reference": "Patient/ct.patient08"
       },
       "requester": {
-        "reference": "Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"
+        "reference": "Organization/FHIR-TEST-ORG-2"
       },
       "output": [
         {
@@ -118,7 +143,7 @@
             "text": "collected specimen"
           },
           "valueReference": {
-            "reference": "Specimen/101"
+            "reference": "Specimen/ct.subject01"
           }
         }
       ]
