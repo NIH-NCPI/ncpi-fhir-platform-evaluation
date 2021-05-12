@@ -14,7 +14,7 @@ def test_codemap_translate(host):
     cm_id = result['response']['id']
 
     # While we have a concept map in place, let's do a few checks
-    translate_result = host.get(f"ConceptMap/$translate?system=http://hl7.org/fhir/administrative-gender&code=male").entries[0]
+    translate_result = host.get(f"ConceptMap/$translate?system=http://hl7.org/fhir/administrative-gender&code=male", rec_count=-1).entries[0]
     match_result = ConceptMapParameter(translate_result)
     assert match_result.match_count > 0, "Make sure we have at least one result"
     assert match_result.result, "Make sure the first match is a postive"
