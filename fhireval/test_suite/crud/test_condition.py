@@ -3,6 +3,7 @@ import pdb
 
 from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
+import urllib.parse
 
 test_id = f"{'2.5.08':10} - CRUD Condition"
 
@@ -82,6 +83,11 @@ def test_delete_condition(host, prep_server):
 
     example_condition = prep_server['CMG-Examples']['Condition'][0]
     example_identifier = example_condition['identifier'][0]
+
+    # So, for now, on google, get below fails because we have "|" in our identifiers. 
+    # I don't think that changing anything here makes sense. Instead, we need to change how 
+    # the identifiers are built 
+    example_identifier = urllib.parse.quote(example_identifier['system'] + "|" + example_identifier['value'])
 
     delete_result = host.delete_by_record_id('Condition', example_condition_id)
     assert delete_result['status_code'] == 200
