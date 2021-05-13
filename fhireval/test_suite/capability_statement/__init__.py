@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 def get_capability_statement(host):
     global _capability_statement, _resources
     if _capability_statement is None:
-        entries = host.get('metadata', rec_count=-1).entries
+        entries = host.get('metadata', no_count=True).entries
 
         # Google wraps the capability statement into an array
         if type(entries) == list:
