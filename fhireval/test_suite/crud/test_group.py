@@ -5,7 +5,7 @@ from fhir_walk.model.patient import Patient
 from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
 
-test_id = f"{'2.5.13':<10} - CRUD Group"
+test_id = f"{'2.2.13':<10} - CRUD Group"
 
 test_weight = 2
 

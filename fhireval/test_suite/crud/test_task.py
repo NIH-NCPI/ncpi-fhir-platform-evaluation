@@ -6,7 +6,7 @@ import pdb
 from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
 
-test_id = f"{'2.5.12':<10} - CRUD Task"
+test_id = f"{'2.2.12':<10} - CRUD Task"
 
 test_weight = 2
 

@@ -3,7 +3,7 @@ import pdb
 
 from fhireval.test_suite.crud import prep_server
 
-test_id = f"{'2.5.11':<10} - CRUD Document Reference"
+test_id = f"{'2.2.11':<10} - CRUD Document Reference"
 
 test_weight = 2
 

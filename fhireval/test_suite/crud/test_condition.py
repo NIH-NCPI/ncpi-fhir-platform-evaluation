@@ -5,7 +5,7 @@ from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
 import urllib.parse
 
-test_id = f"{'2.5.08':10} - CRUD Condition"
+test_id = f"{'2.2.08':10} - CRUD Condition"
 
 test_weight = 2
 

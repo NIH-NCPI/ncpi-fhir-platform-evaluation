@@ -4,7 +4,7 @@ import pdb
 from fhireval.test_suite.crud import prep_server
 from fhir_walk.model import unwrap_bundle
 
-test_id = f"{'2.5.05':10} - CRUD Specimen"
+test_id = f"{'2.2.05':10} - CRUD Specimen"
 
 test_weight = 2
 
