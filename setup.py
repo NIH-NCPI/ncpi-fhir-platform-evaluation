@@ -15,5 +15,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
-    scripts=['scripts/evaluate_server.py'],
+    scripts=['scripts/evaluate_server'],
 )
