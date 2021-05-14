@@ -7,7 +7,7 @@ The test framework will provide a flexible host configuration that can be extend
 
 # Installation
 There are a small number of library dependencies. To install them, run the following command within the top level directory of the repository:
-    pip install -r requrements.txt
+    pip install -r requirements.txt
 
 Once this is done, you'll need to then install the program itself:
     python setup.py develop
