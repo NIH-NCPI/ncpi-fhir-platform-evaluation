@@ -66,6 +66,13 @@ example_code_system_source = {
 
 def reset_testdata(host):
     for entry in host.get(f"ConceptMap?name={example_code_system_source['name']}").entries:
-        entry = unwrap_bundle(entry)
+        # Possibly there is a bundle
+        if 'resourceType' in entry and entry['resourceType'] == 'Bundle':
+            entry = unwrap_bundle(entry)
+        elif 'resource' in entry:
+            entry = [entry]
+
+
         for part in entry:
+            print(part['resource']['id'])
             host.delete_by_record_id('ConceptMap', part['resource']['id'])

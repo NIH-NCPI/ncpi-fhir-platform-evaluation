@@ -1,7 +1,6 @@
 import pytest
 import pdb
 
-
 from fhir_walk.model.patient import Patient
 
 from fhir_walk.model import unwrap_bundle
@@ -9,7 +8,7 @@ from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
 import fhireval.test_suite.crud
 
-test_id = f"{'2.5.02':<10} - CRUD Patient"
+test_id = f"{'2.2.02':<10} - CRUD Patient"
 
 test_weight = 2
 
@@ -39,9 +38,8 @@ def test_patient_read(host, prep_server):
     # I'm just testing a couple of values from the patient object based on
     # the patient in crud.example_patient. These values will probably change
     # once we settle on some simulated data
-    assert (
-        patient.subject_id == example_patient["identifier"][0]["value"]
-    ), "READ Verify Subject ID"
+    assert (patient.subject_id == example_patient["identifier"][0]["value"]
+            ), "READ Verify Subject ID"
     assert patient.eth == "Hispanic or Latino", "READ Verify Ethnicity"
     assert patient.sex == "male"
 
@@ -93,4 +91,5 @@ def test_patient_delete(host, prep_server):
     assert delete_result["status_code"] == 200
     response = host.get(f"Patient?identifier={example_identifier}").response
     patient_query = unwrap_bundle(response)
-    assert len(patient_query) == 0, "Verify that delete really deleted the record"
+    assert len(
+        patient_query) == 0, "Verify that delete really deleted the record"

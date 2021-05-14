@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-from fhirwood import __version__
+from fhireval import __version__
 
 root_dir = os.path.dirname(os.path.abspath(__file__))
 req_file = os.path.join(root_dir, "requirements.txt")
@@ -15,5 +15,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
-    scripts=['scripts/evaluate_server.py'],
+    scripts=['scripts/evaluate_server'],
 )

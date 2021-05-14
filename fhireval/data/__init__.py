@@ -54,7 +54,11 @@ def delete_content_for_resource(host, resource_type, records=None):
     def delete_from_response(response):
         if "resource" in response:
             id = response['resource']['id']
-            delete_result = host.delete_by_record_id(resource_type, int(id))
+            # Some systems expect integer IDs, while others expect GUIDs, which obviously aren't convertable to ints
+            try:
+                id = int(id)
+            except:
+                pass
 
     if records is None:
         for response in host.get(f"{resource_type}").entries:

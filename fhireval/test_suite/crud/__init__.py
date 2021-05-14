@@ -1,5 +1,5 @@
 # The bullet points associated with this set of tests in the evaluation document
-test_set_id = "2.5"
+test_set_id = "2.2"
 
 # User friendly name of the tests
 test_set_name = "CRUD"
@@ -17,7 +17,10 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
+# IMPORTANT - This may seem redundant to the data.prep_server, but it is very 
+#             different. This version doesn't actually plan for any sort of
+#             persistence of data, whereas the version in data is expected to
+#             run a single time.
 @pytest.fixture(scope="module")
 def prep_server(host):
     # For the CRUD, we just need to make sure we delete any leftover data from
@@ -27,10 +30,10 @@ def prep_server(host):
     # We'll just walk through the _ALL for each resource type
 
     for resource, record in test_data["_ALL"].items():
-        delete_content_for_resource(host, resource, record)
+        delete_content_for_resource(host, resource)
 
     yield test_data
 
     # And once again to clean up after this module completes
     for resource, record in test_data["_ALL"].items():
-        delete_content_for_resource(host, resource, record)
+        delete_content_for_resource(host, resource)
