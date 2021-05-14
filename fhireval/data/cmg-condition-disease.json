@@ -7,7 +7,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam1|ct.patient01|ARTHROGRYPOSIS, DISTAL, TYPE 1A; DA1A"
+            "value": "FHIR-CMG-TEST-ct-fam1-ct.patient01-ARTHROGRYPOSIS, DISTAL, TYPE 1A; DA1A"
           }
         ],
         "verificationStatus": {
@@ -61,7 +61,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam1|ct.patient02|ARTHROGRYPOSIS, DISTAL, TYPE 1A; DA1A"
+            "value": "FHIR-CMG-TEST-ct-fam1-ct.patient02-ARTHROGRYPOSIS, DISTAL, TYPE 1A; DA1A"
           }
         ],
         "verificationStatus": {
@@ -109,7 +109,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam1|ct.patient03|ARTHROGRYPOSIS, DISTAL, TYPE 1A; DA1A"
+            "value": "FHIR-CMG-TEST-ct-fam1-ct.patient03-ARTHROGRYPOSIS, DISTAL, TYPE 1A; DA1A"
           }
         ],
         "verificationStatus": {
@@ -157,7 +157,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam2|ct.patient04|ASD|blepharophimosis|kidney anomaly|seizures"
+            "value": "FHIR-CMG-TEST-ct-fam2-ct.patient04-ASD-blepharophimosis-kidney anomaly-seizures"
           }
         ],
         "verificationStatus": {
@@ -182,7 +182,7 @@
           }
         ],
         "code": {
-          "text": "ASD|blepharophimosis|kidney anomaly|seizures"
+          "text": "ASD-blepharophimosis-kidney anomaly-seizures"
         },
         "subject": {
           "reference": "Patient/4724"
@@ -198,7 +198,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam2|ct.patient05|ASD|blepharophimosis|kidney anomaly|seizures"
+            "value": "FHIR-CMG-TEST-ct-fam2-ct.patient05-ASD-blepharophimosis-kidney anomaly-seizures"
           }
         ],
         "verificationStatus": {
@@ -223,7 +223,7 @@
           }
         ],
         "code": {
-          "text": "ASD|blepharophimosis|kidney anomaly|seizures"
+          "text": "ASD-blepharophimosis-kidney anomaly-seizures"
         },
         "subject": {
           "reference": "Patient/4725"
@@ -239,7 +239,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam2|ct.patient06|ASD|blepharophimosis|kidney anomaly|seizures"
+            "value": "FHIR-CMG-TEST-ct-fam2-ct.patient06-ASD-blepharophimosis-kidney anomaly-seizures"
           }
         ],
         "verificationStatus": {
@@ -264,7 +264,7 @@
           }
         ],
         "code": {
-          "text": "ASD|blepharophimosis|kidney anomaly|seizures"
+          "text": "ASD-blepharophimosis-kidney anomaly-seizures"
         },
         "subject": {
           "reference": "Patient/4726"
@@ -280,7 +280,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam3|ct.patient07|CONGENITAL DISORDER OF GLYCOSYLATION, TYPE It; CDG1T"
+            "value": "FHIR-CMG-TEST-ct-fam3-ct.patient07-CONGENITAL DISORDER OF GLYCOSYLATION, TYPE It; CDG1T"
           }
         ],
         "verificationStatus": {
@@ -329,7 +329,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam3|ct.patient08|CONGENITAL DISORDER OF GLYCOSYLATION, TYPE It; CDG1T"
+            "value": "FHIR-CMG-TEST-ct-fam3-ct.patient08-CONGENITAL DISORDER OF GLYCOSYLATION, TYPE It; CDG1T"
           }
         ],
         "verificationStatus": {
@@ -372,7 +372,7 @@
         "identifier": [
           {
             "system": "urn:ncpi:unique-string",
-            "value": "FHIR-CMG-TEST|ct-fam3|ct.patient09|CONGENITAL DISORDER OF GLYCOSYLATION, TYPE It; CDG1T"
+            "value": "FHIR-CMG-TEST-ct-fam3-ct.patient09-CONGENITAL DISORDER OF GLYCOSYLATION, TYPE It; CDG1T"
           }
         ],
         "verificationStatus": {
