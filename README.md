@@ -15,7 +15,7 @@ Once this is done, you'll need to then install the program itself:
 Alternatively, you can do both with a single command:
     pip install -e .
 
-(users can drop the -e argument if they aren't planning to perform any debugging)
+(users can drop the -e argument if they aren't planning to make any changes to the tests themselves)
 
 I find it easier to debug using the "develop" option. Once the test suite is more stable, it will probably be preferable to not use the develop option unless the user plans to make changes to the test suite itself.
 
@@ -24,6 +24,11 @@ Users can always get a listing of options using the argument --help
 
 # Basic Usage
 The most important arguments are listed below, however, users can change details such as log directory, report directory, report prefix and log level using command line arguments. These are described in the default help listing described above.
+
+If a fhir_hosts file doesn't exist in your current working directory when running the test, it will dump an example fhir_hosts configuration file. Please see instructions below about making the changes specific to your fhir server(s).
+
+To run the entire test suite, simply run the command optionally followed by any arguments:
+    evaluate_server
 
 ## Choosing the platform to be tested
 Once you have a valid hosts configuration, you can choose which host to run tests against using -e/--env host_id. The help listing will list each of the configured hosts the program has found in your fhir_hosts file
