@@ -12,7 +12,12 @@ There are a small number of library dependencies. To install them, run the follo
 Once this is done, you'll need to then install the program itself:
     python setup.py develop
 
-Develop can be any of the standard setup.py arguments (install, etc), however, I find it easier to debug using the "develop" option. Once the test suite is more stable, it will probably be preferable to not use the develop option.
+Alternatively, you can do both with a single command:
+    pip install -e .
+
+(users can drop the -e argument if they aren't planning to perform any debugging)
+
+I find it easier to debug using the "develop" option. Once the test suite is more stable, it will probably be preferable to not use the develop option unless the user plans to make changes to the test suite itself.
 
 # Standard Linux Help
 Users can always get a listing of options using the argument --help
