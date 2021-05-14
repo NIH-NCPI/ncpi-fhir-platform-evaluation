@@ -62,7 +62,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0000178",
               "display": "blood"
             } ],
@@ -84,7 +84,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0000178",
               "display": "blood"
             } ],
@@ -106,7 +106,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0000178",
               "display": "blood"
             } ],
@@ -128,7 +128,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0001003",
               "display": "skin epidermis"
             } ],
@@ -150,7 +150,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0001003",
               "display": "skin epidermis"
             } ],
@@ -172,7 +172,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0001003",
               "display": "skin epidermis"
             } ],
@@ -194,7 +194,7 @@
         "collection": {
           "bodySite": {
             "coding": [ {
-              "system": "https://uberon.github.io/",
+              "system": "http://purl.obolibrary.org/obo/uberon.owl",
               "code": "UBERON:0001003",
               "display": "skin epidermis"
             } ],

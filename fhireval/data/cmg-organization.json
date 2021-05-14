@@ -1,15 +1,18 @@
 {
   "groupname": "CMG-Examples",
   "resources": {
-    "Organization": [ {
-      "resourceType": "Organization",
-        "identifier": [ {
-          "system": "urn:ncpi:unique-string",
-          "value": "FHIR-TEST-ORG"
-        } ],
+    "Organization": [
+      {
+        "resourceType": "Organization",
+        "identifier": [
+          {
+            "system": "urn:ncpi:unique-string",
+            "value": "FHIR-TEST-ORG"
+          }
+        ],
         "active": true,
         "name": "FHIR-Org"
       }
-		]
+    ]
   }
 }

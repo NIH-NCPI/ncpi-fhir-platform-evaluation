@@ -24,10 +24,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient09"
+          "reference": "ct.patient09"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -40,10 +40,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient08"
+          "reference": "ct.patient08"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -56,10 +56,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient07"
+          "reference": "ct.patient07"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -72,10 +72,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient06"
+          "reference": "ct.patient06"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -88,10 +88,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient05"
+          "reference": "ct.patient05"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -104,10 +104,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient04"
+          "reference": "ct.patient04"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -120,10 +120,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient03"
+          "reference": "ct.patient03"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -136,10 +136,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient02"
+          "reference": "ct.patient02"
         }
       }, {
         "resourceType": "ResearchSubject",
@@ -152,10 +152,10 @@
         } ],
         "status": "on-study",
         "study": {
-          "reference": "ResearchStudy?identifier=FHIR-CMG-TEST"
+          "reference": "FHIR-CMG-TEST"
         },
         "individual": {
-          "reference": "Patient?identifier=ct.patient01"
+          "reference": "ct.patient01"
         }
       }
     ]
