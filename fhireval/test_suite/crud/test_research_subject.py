@@ -15,7 +15,6 @@ example_study_id = None
 example_subject_id = None
 example_patient_id = None
 
-
 def test_create_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
