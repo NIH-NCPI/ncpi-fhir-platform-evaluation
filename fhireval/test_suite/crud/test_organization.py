@@ -15,7 +15,7 @@ example_organization_id = None
 def test_create_research_study(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     response = host.post('Organization', example_org, validate_only=False)
 
     assert response['status_code'] == 201, 'CREATE success'
@@ -25,7 +25,7 @@ def test_create_research_study(host, prep_server):
 def test_read_research_study(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     study_query = host.get(f"Organization/{example_organization_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -36,7 +36,7 @@ def test_read_research_study(host, prep_server):
 def test_update_research_study(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     altered_study = example_org.copy()
 
     altered_study['name'] = 'New_Name'
@@ -67,7 +67,7 @@ def test_patch_research_study(host, prep_server):
 def test_delete_research_study(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     example_identifier = example_org['identifier'][0]
 
     delete_result = host.delete_by_record_id('Organization',

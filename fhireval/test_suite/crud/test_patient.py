@@ -19,7 +19,7 @@ example_patient_id = None
 def test_patient_create(host, prep_server):
     global example_patient_id
     # Test CREATE
-    example_patient = prep_server["CMG-Examples"]["Patient"][0]
+    example_patient = prep_server["CMG"]["Patient"][0]
     response = host.post("Patient", example_patient, validate_only=False)
 
     # The Patient was created above so we just need to check the return code
@@ -30,7 +30,7 @@ def test_patient_create(host, prep_server):
 def test_patient_read(host, prep_server):
     global example_patient_id
     # Test READ
-    example_patient = prep_server["CMG-Examples"]["Patient"][0]
+    example_patient = prep_server["CMG"]["Patient"][0]  
     patient_query = host.get(f"Patient/{example_patient_id}").entries
     assert len(patient_query) == 1, "READ Success and only one was found"
     patient = Patient(host, patient_query[0])
@@ -40,14 +40,15 @@ def test_patient_read(host, prep_server):
     # once we settle on some simulated data
     assert (patient.subject_id == example_patient["identifier"][0]["value"]
             ), "READ Verify Subject ID"
-    assert patient.eth == "Hispanic or Latino", "READ Verify Ethnicity"
-    assert patient.sex == "male"
+    print(example_patient)
+    assert patient_query[0]['extension'] == example_patient['extension'], "Race is complicated...check that the entire extension agrees"
+    assert patient.sex == example_patient['gender']
 
 
 def test_patient_update(host, prep_server):
     global example_patient_id
     # Test UPDATE
-    example_patient = prep_server["CMG-Examples"]["Patient"][0]
+    example_patient = prep_server["CMG"]["Patient"][0]
 
     altered_patient = example_patient.copy()
     altered_patient["id"] = example_patient_id
@@ -70,7 +71,7 @@ def test_patient_update(host, prep_server):
 def test_patient_patch(host, prep_server):
     global example_patient_id
     # Test PATCH
-    example_patient = prep_server["CMG-Examples"]["Patient"][0]
+    example_patient = prep_server["CMG"]["Patient"][0]
 
     # Super simple for purposes of example. Let's set the sex back to female
     patch_ops = [{"op": "add", "path": "/gender", "value": "male"}]
@@ -84,7 +85,7 @@ def test_patient_patch(host, prep_server):
 def test_patient_delete(host, prep_server):
     global example_patient_id
     # Test Delete
-    example_patient = prep_server["CMG-Examples"]["Patient"][0]
+    example_patient = prep_server["CMG"]["Patient"][0]
     example_identifier = example_patient["identifier"][0]
 
     delete_result = host.delete_by_record_id("Patient", example_patient_id)

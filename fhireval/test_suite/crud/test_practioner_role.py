@@ -19,9 +19,9 @@ example_organization_id = None
 def test_create_research_practitioner_role(host, prep_server):
     global example_practitioner_id, example_practitioner_role_id, example_organization_id
 
-    example_organization = prep_server['Common-Examples']['Organization'][0]
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
-    example_practitioner_role = prep_server['Common-Examples'][
+    example_organization = prep_server['CMG']['Organization'][0]
+    example_practitioner = prep_server['CMG']['Practitioner'][0]
+    example_practitioner_role = prep_server['CMG'][
         'PractitionerRole'][0]
 
     response = host.post('Practitioner',
@@ -52,7 +52,7 @@ def test_create_research_practitioner_role(host, prep_server):
 def test_read_research_practitioner_role(host, prep_server):
     global example_practitioner_id, example_practitioner_role_id, example_organization_id
 
-    example_practitioner_role = prep_server['Common-Examples'][
+    example_practitioner_role = prep_server['CMG'][
         'PractitionerRole'][0]
     practitioner_query = host.get(
         f"PractitionerRole/{example_practitioner_role_id}").entries
@@ -69,7 +69,7 @@ def test_read_research_practitioner_role(host, prep_server):
 def test_update_research_practitioner_role(host, prep_server):
     global example_practitioner_id, example_practitioner_role_id, example_organization_id
 
-    example_practitioner_role = prep_server['Common-Examples'][
+    example_practitioner_role = prep_server['CMG'][
         'PractitionerRole'][0]
 
     altered_practitioner_role = example_practitioner_role.copy()

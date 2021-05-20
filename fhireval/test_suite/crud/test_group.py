@@ -16,7 +16,7 @@ example_group_id = None
 def test_create_group(host, prep_server):
     global example_group_id
 
-    example_group = prep_server['Common-Examples']['Group'][0]
+    example_group = prep_server['CMG']['Group'][0]
     response = host.post('Group', example_group, validate_only=False)
 
     assert response['status_code'] == 201, 'CREATE success'
@@ -26,7 +26,7 @@ def test_create_group(host, prep_server):
 def test_read_group(host, prep_server):
     global example_group_id
 
-    example_group = prep_server['Common-Examples']['Group'][0]
+    example_group = prep_server['CMG']['Group'][0]
     study_query = host.get(f"Group/{example_group_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -39,7 +39,7 @@ def test_read_group(host, prep_server):
 def test_update_group(host, prep_server):
     global example_group_id
 
-    example_group = prep_server['Common-Examples']['Group'][0]
+    example_group = prep_server['CMG']['Group'][0]
     altered_study = example_group.copy()
 
     altered_study['type'] = 'device'
@@ -65,7 +65,7 @@ def test_patch_group(host, prep_server):
 def test_delete_group(host, prep_server):
     global example_group_id
 
-    example_group = prep_server['Common-Examples']['Group'][0]
+    example_group = prep_server['CMG']['Group'][0]
     example_identifier = example_group['identifier'][0]
 
     delete_result = host.delete_by_record_id('Group', example_group_id)

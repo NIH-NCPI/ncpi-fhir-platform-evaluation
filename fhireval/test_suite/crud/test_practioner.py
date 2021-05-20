@@ -16,8 +16,8 @@ example_practitioner_id = None
 def test_create_research_practitioner(host, prep_server):
     global example_practitioner_id
 
-    print(prep_server['Common-Examples']['Practitioner'])
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
+    print(prep_server['CMG']['Practitioner'])
+    example_practitioner = prep_server['CMG']['Practitioner'][0]
     response = host.post('Practitioner',
                          example_practitioner,
                          validate_only=False)
@@ -29,7 +29,7 @@ def test_create_research_practitioner(host, prep_server):
 def test_read_research_practitioner(host, prep_server):
     global example_practitioner_id
 
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
+    example_practitioner = prep_server['CMG']['Practitioner'][0]
     practitioner_query = host.get(
         f"Practitioner/{example_practitioner_id}").entries
     assert len(practitioner_query) == 1, "READ Success and only one was found"
@@ -43,7 +43,7 @@ def test_read_research_practitioner(host, prep_server):
 def test_update_research_practitioner(host, prep_server):
     global example_practitioner_id
 
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
+    example_practitioner = prep_server['CMG']['Practitioner'][0]
     altered_practitioner = example_practitioner.copy()
 
     altered_practitioner['telecom'][0]['value'] = '(123) 456-7890'
@@ -72,7 +72,7 @@ def test_patch_research_practitioner(host, prep_server):
 def test_delete_research_practitioner(host, prep_server):
     global example_practitioner_id
 
-    example_practitioner = prep_server['Common-Examples']['Practitioner'][0]
+    example_practitioner = prep_server['CMG']['Practitioner'][0]
     example_identifier = example_practitioner['name'][0]['text']
 
     delete_result = host.delete_by_record_id('Practitioner',

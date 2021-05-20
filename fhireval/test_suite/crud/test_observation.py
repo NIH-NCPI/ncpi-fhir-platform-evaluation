@@ -3,6 +3,7 @@ import pdb
 
 from fhir_walk.model import unwrap_bundle
 from fhireval.test_suite.crud import prep_server
+from pprint import pformat
 
 test_id = f"{'2.2.06':10} - CRUD Observation"
 
@@ -15,7 +16,7 @@ example_patient_id = None
 def test_create_research_subject(host, prep_server):
     global example_observation_id, example_patient_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
     example_observation = prep_server['eIII-Examples']['Observation'][0]
 
     response = host.post('Patient', example_patient, validate_only=False)
@@ -24,6 +25,15 @@ def test_create_research_subject(host, prep_server):
 
     example_observation['subject'][
         'reference'] = f"Patient/{example_patient_id}"
+
+    # Let's not try to modify the relative date/time here to set the 
+    # proper ID, just set it to something
+    del example_observation['_effectiveDateTime']    
+    example_observation['effectiveDateTime'] = '2021-05-20'
+
+    # And we don't have the visit extensions loaded as of yet
+    del example_observation['extension']
+
     response = host.post('Observation',
                          example_observation,
                          validate_only=False)
@@ -33,7 +43,7 @@ def test_create_research_subject(host, prep_server):
 
 def test_read_research_subject(host, prep_server):
     global example_observation_id, example_patient_id
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
     example_observation = prep_server['eIII-Examples']['Observation'][0]
 
     obs_query = host.get(f"Observation/{example_observation_id}").entries
@@ -46,7 +56,7 @@ def test_read_research_subject(host, prep_server):
 
 def test_update_research_subject(host, prep_server):
     global example_observation_id, example_patient_id
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
     example_observation = prep_server['eIII-Examples']['Observation'][0]
 
     altered_obs = example_observation.copy()
@@ -76,7 +86,7 @@ def test_patch_research_subject(host, prep_server):
 
 def test_delete_research_subject(host, prep_server):
     global example_observation_id, example_patient_id
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
     example_observation = prep_server['eIII-Examples']['Observation'][0]
     example_identifier = example_observation['identifier'][0]
 

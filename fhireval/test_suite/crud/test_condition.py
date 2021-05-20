@@ -16,8 +16,11 @@ example_condition_id = None
 def test_create_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_condition = prep_server['CMG-Examples']['Condition'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
+    example_condition = prep_server['CMG']['Condition'][0]
+    # We shouldn't have loaded profiles at this point, so let's strip
+    # the profile out of the condition so that it's just a plain condition
+    del example_condition['meta']
     response = host.post('Patient', example_patient, validate_only=False)
     assert response['status_code'] == 201, 'CREATE success'
     example_patient_id = response['response']['id']
@@ -25,7 +28,6 @@ def test_create_condition(host, prep_server):
     # Gotta update the reference to make sense
     example_condition['subject']['reference'] = f"Patient/{example_patient_id}"
     response = host.post('Condition', example_condition, validate_only=False)
-
     assert response['status_code'] == 201, 'CREATE success'
     example_condition_id = response['response']['id']
 
@@ -33,8 +35,8 @@ def test_create_condition(host, prep_server):
 def test_read_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_condition = prep_server['CMG-Examples']['Condition'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
+    example_condition = prep_server['CMG']['Condition'][0]
 
     study_query = host.get(f"Condition/{example_condition_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
@@ -47,8 +49,8 @@ def test_read_condition(host, prep_server):
 def test_update_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_condition = prep_server['CMG-Examples']['Condition'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
+    example_condition = prep_server['CMG']['Condition'][0]
 
     altered_condition = example_condition.copy()
     altered_condition['id'] = example_condition_id
@@ -64,7 +66,7 @@ def test_update_condition(host, prep_server):
 def test_patch_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
 
     patch_ops = [{
         "op": "replace",
@@ -81,7 +83,7 @@ def test_patch_condition(host, prep_server):
 def test_delete_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
-    example_condition = prep_server['CMG-Examples']['Condition'][0]
+    example_condition = prep_server['CMG']['Condition'][0]
     example_identifier = example_condition['identifier'][0]
 
     # So, for now, on google, get below fails because we have "|" in our identifiers. 
