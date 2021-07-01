@@ -1,14 +1,10 @@
 {
   "groupname": "CMG",
+  "datatype": "Data",
   "resources": {
     "Condition": [
       {
         "resourceType": "Condition",
-        "meta": {
-            "profile": [
-              "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
-            ]
-        },
         "identifier": [
           {
             "system": "urn:ncpi-test:unique-string",
@@ -52,6 +48,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-1"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -99,6 +100,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-2"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -146,6 +152,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-2"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -193,6 +204,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-3"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -240,6 +256,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -287,6 +308,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -334,6 +360,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -381,6 +412,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -428,6 +464,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -475,6 +516,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -522,6 +568,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -569,6 +620,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -616,6 +672,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -663,6 +724,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -710,6 +776,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -757,6 +828,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -804,6 +880,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -851,6 +932,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-6"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -898,6 +984,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-6"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -945,6 +1036,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-6"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -992,6 +1088,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-6"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1039,6 +1140,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-6"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1086,6 +1192,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-7"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1133,6 +1244,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-7"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1180,6 +1296,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-8"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1227,6 +1348,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-8"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1273,7 +1399,12 @@
           "text": "Present: Hyperextensibility at elbow"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1320,7 +1451,12 @@
           "text": "Present: Abnormality of the periorbital region"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1367,7 +1503,12 @@
           "text": "Present: Aortic root aneurysm"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1414,7 +1555,12 @@
           "text": "Present: Abnormal cornea morphology"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1461,7 +1607,12 @@
           "text": "Present: Abnormal vertebral morphology"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1508,7 +1659,12 @@
           "text": "Present: Corneal ulceration"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1555,7 +1711,12 @@
           "text": "Present: Metopic synostosis"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1602,7 +1763,12 @@
           "text": "Present: Bifid tongue"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1649,7 +1815,12 @@
           "text": "Present: Low hanging columella"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1696,7 +1867,12 @@
           "text": "Present: Bilateral cryptorchidism"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1743,7 +1919,12 @@
           "text": "Present: Underfolded helix"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1790,7 +1971,12 @@
           "text": "Present: CNS hypomyelination"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1837,7 +2023,12 @@
           "text": "Present: Cleft ala nasi"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1884,7 +2075,12 @@
           "text": "Present: Inverted nipples"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1931,7 +2127,12 @@
           "text": "Present: Scoliosis"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -1978,7 +2179,12 @@
           "text": "Present: Supernumerary nipple"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2025,7 +2231,12 @@
           "text": "Present: Intellectual disability, moderate"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2072,7 +2283,12 @@
           "text": "Present: Gastroesophageal reflux"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2119,7 +2335,12 @@
           "text": "Present: Constipation"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2166,7 +2387,12 @@
           "text": "Present: Overlapping toe"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2213,7 +2439,12 @@
           "text": "Present: Bicuspid aortic valve"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2260,7 +2491,12 @@
           "text": "Present: Hip dysplasia"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2307,7 +2543,12 @@
           "text": "Present: Hyporeflexia"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2354,7 +2595,12 @@
           "text": "Present: Postaxial hand polydactyly"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2401,7 +2647,12 @@
           "text": "Present: Sacral dimple"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2448,7 +2699,12 @@
           "text": "Present: Pectus excavatum"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2495,7 +2751,12 @@
           "text": "Present: Hyperactivity"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2542,7 +2803,12 @@
           "text": "Present: Short attention span"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2589,7 +2855,12 @@
           "text": "Present: Long palpebral fissure"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2636,7 +2907,12 @@
           "text": "Present: Myopia"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2683,7 +2959,12 @@
           "text": "Present: Sparse and thin eyebrow"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2730,7 +3011,12 @@
           "text": "Present: Ptosis"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2777,7 +3063,12 @@
           "text": "Present: Thickened helices"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2824,7 +3115,12 @@
           "text": "Present: Facial hypotonia"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2871,7 +3167,12 @@
           "text": "Present: Long face"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2918,7 +3219,12 @@
           "text": "Present: High palate"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -2965,7 +3271,12 @@
           "text": "Present: Hydronephrosis"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -3012,7 +3323,12 @@
           "text": "Present: Vesicoureteral reflux"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/phenotype"
+          ]
         }
       },
       {
@@ -3060,6 +3376,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-1"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
         }
       },
       {
@@ -3107,6 +3428,11 @@
         },
         "subject": {
           "reference": "Patient/CMG-Patient-2"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
         }
       },
       {
@@ -3160,6 +3486,11 @@
           "unit": "a",
           "system": "http://unitsofmeasure.org",
           "code": "years"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
         }
       },
       {
@@ -3205,7 +3536,12 @@
           {
             "text": "another phenotype description. "
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
+        }
       },
       {
         "resourceType": "Condition",
@@ -3250,7 +3586,12 @@
           {
             "text": "another phenotype description. "
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
+        }
       },
       {
         "resourceType": "Condition",
@@ -3295,7 +3636,12 @@
           {
             "text": "another phenotype description. "
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
+        }
       },
       {
         "resourceType": "Condition",
@@ -3347,7 +3693,12 @@
           {
             "text": "a phenotype description.  Other Disease IDs: ORPHA:1147 ( Sheldon-Hall syndrome )"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
+        }
       },
       {
         "resourceType": "Condition",
@@ -3399,7 +3750,12 @@
           {
             "text": "a phenotype description.  Other Disease IDs: ORPHA:1147 ( Sheldon-Hall syndrome )"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
+        }
       },
       {
         "resourceType": "Condition",
@@ -3445,7 +3801,7 @@
           "text": "Some random disease description"
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
         },
         "onsetAge": {
           "value": 19,
@@ -3457,7 +3813,12 @@
           {
             "text": "a phenotype description.  Other Disease IDs: ORPHA:1147 ( Sheldon-Hall syndrome )"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/disease"
+          ]
+        }
       }
     ],
     "DiagnosticReport": [
@@ -3490,7 +3851,12 @@
           {
             "reference": "Observation/CMG-Observation-7"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+          ]
+        }
       },
       {
         "resourceType": "DiagnosticReport",
@@ -3521,7 +3887,12 @@
           {
             "reference": "Observation/CMG-Observation-8"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+          ]
+        }
       },
       {
         "resourceType": "DiagnosticReport",
@@ -3552,7 +3923,12 @@
           {
             "reference": "Observation/CMG-Observation-9"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+          ]
+        }
       },
       {
         "resourceType": "DiagnosticReport",
@@ -3586,7 +3962,12 @@
           {
             "reference": "Observation/CMG-Observation-10"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+          ]
+        }
       },
       {
         "resourceType": "DiagnosticReport",
@@ -3611,13 +3992,18 @@
           ]
         },
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
         },
         "result": [
           {
             "reference": "Observation/CMG-Observation-12"
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
+          ]
+        }
       }
     ],
     "DocumentReference": [
@@ -3655,7 +4041,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3691,7 +4082,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3727,7 +4123,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3763,7 +4164,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3799,7 +4205,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3835,7 +4246,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3871,7 +4287,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3907,7 +4328,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3943,7 +4369,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -3979,7 +4410,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4015,7 +4451,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4051,7 +4492,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4087,7 +4533,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4123,7 +4574,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4159,7 +4615,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4195,7 +4656,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4211,7 +4677,7 @@
         ],
         "status": "current",
         "subject": {
-          "reference": "Patient/CMG-Patient-8",
+          "reference": "Patient/CMG-Patient-9",
           "display": "fd-sub1"
         },
         "date": "2016-05-26T00:00:00+06:00",
@@ -4231,7 +4697,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4247,7 +4718,7 @@
         ],
         "status": "current",
         "subject": {
-          "reference": "Patient/CMG-Patient-8",
+          "reference": "Patient/CMG-Patient-9",
           "display": "fd-sub1"
         },
         "date": "2016-05-26T00:00:00+06:00",
@@ -4267,7 +4738,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4283,7 +4759,7 @@
         ],
         "status": "current",
         "subject": {
-          "reference": "Patient/CMG-Patient-8",
+          "reference": "Patient/CMG-Patient-9",
           "display": "fd-sub1"
         },
         "date": "2016-05-26T00:00:00+06:00",
@@ -4303,7 +4779,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       },
       {
         "resourceType": "DocumentReference",
@@ -4319,7 +4800,7 @@
         ],
         "status": "current",
         "subject": {
-          "reference": "Patient/CMG-Patient-8",
+          "reference": "Patient/CMG-Patient-9",
           "display": "fd-sub1"
         },
         "date": "2016-05-26T00:00:00+06:00",
@@ -4339,7 +4820,12 @@
               "display": "Sequence Filename"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+          ]
+        }
       }
     ],
     "Observation": [
@@ -4426,7 +4912,12 @@
               "text": "Pathogenic"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -4511,7 +5002,12 @@
               "text": "Pathogenic"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -4596,7 +5092,12 @@
               "text": "Pathogenic"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -4681,7 +5182,12 @@
               "text": "Pathogenic"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -4766,7 +5272,12 @@
               "text": "Pathogenic"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -4851,7 +5362,12 @@
               "text": "Likely pathogenic"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5038,7 +5554,12 @@
               ]
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5225,7 +5746,12 @@
               ]
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5424,7 +5950,12 @@
               ]
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5623,7 +6154,12 @@
               ]
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5822,7 +6358,12 @@
               ]
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5958,7 +6499,12 @@
               "text": "Deletion 144507790-152949444"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Observation"
+          ]
+        }
       },
       {
         "resourceType": "Observation",
@@ -5995,16 +6541,16 @@
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "PRN",
-              "display": "parent"
-            },
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
               "code": "MTH",
               "display": "mother"
             }
           ],
           "text": "Mother"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship"
+          ]
         }
       },
       {
@@ -6042,16 +6588,16 @@
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "PRN",
-              "display": "parent"
-            },
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
               "code": "FTH",
               "display": "father"
             }
           ],
           "text": "Father"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship"
+          ]
         }
       },
       {
@@ -6089,16 +6635,16 @@
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "PRN",
-              "display": "parent"
-            },
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
               "code": "MTH",
               "display": "mother"
             }
           ],
           "text": "Mother"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship"
+          ]
         }
       },
       {
@@ -6136,16 +6682,16 @@
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "PRN",
-              "display": "parent"
-            },
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
               "code": "FTH",
               "display": "father"
             }
           ],
           "text": "Father"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship"
+          ]
         }
       },
       {
@@ -6176,16 +6722,11 @@
         },
         "focus": [
           {
-            "reference": "Patient/CMG-Patient-8"
+            "reference": "Patient/CMG-Patient-9"
           }
         ],
         "valueCodeableConcept": {
           "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "PRN",
-              "display": "parent"
-            },
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
               "code": "MTH",
@@ -6193,6 +6734,11 @@
             }
           ],
           "text": "Mother"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship"
+          ]
         }
       },
       {
@@ -6223,23 +6769,28 @@
         },
         "focus": [
           {
-            "reference": "Patient/CMG-Patient-8"
+            "reference": "Patient/CMG-Patient-9"
           }
         ],
         "valueCodeableConcept": {
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "PRN",
-              "display": "parent"
+              "code": "FTH",
+              "display": "father"
             },
             {
               "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-              "code": "FTH",
-              "display": "father"
+              "code": "PRN",
+              "display": "parent"
             }
           ],
           "text": "Father"
+        },
+        "meta": {
+          "profile": [
+            "https://ncpi-fhir.github.io/ncpi-fhir-ig/StructureDefinition/family-relationship"
+          ]
         }
       }
     ],
@@ -6257,7 +6808,12 @@
           }
         ],
         "active": true,
-        "name": "FD"
+        "name": "FD",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Organization"
+          ]
+        }
       }
     ],
     "Patient": [
@@ -6292,7 +6848,11 @@
             "value": "CMG.1"
           }
         ],
-        "gender": "female"
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6325,7 +6885,12 @@
             "value": "CMG.2"
           }
         ],
-        "gender": "male"
+        "gender": "male",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6346,43 +6911,6 @@
                 "valueString": "Asian:Middle Eastern (from the United Arab Emirates)"
               }
             ]
-          },
-          {
-            "url": "http://fhir.ncpi-project-forge.io/StructureDefinition/age-at-event",
-            "valueAge": {
-              "value": 42,
-              "unit": "a",
-              "system": "http://unitsofmeasure.org",
-              "code": "years"
-            }
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
-            "extension": [
-              {
-                "url": "target",
-                "valueReference": {
-                  "reference": "Patient/CMG-Patient-3"
-                }
-              },
-              {
-                "url": "targetPath",
-                "valueString": "birthDate"
-              },
-              {
-                "url": "relationship",
-                "valueCode": "after"
-              },
-              {
-                "url": "offset",
-                "valueDuration": {
-                  "value": 42,
-                  "unit": "a",
-                  "system": "http://unitsofmeasure.org",
-                  "code": "years"
-                }
-              }
-            ]
           }
         ],
         "identifier": [
@@ -6395,7 +6923,12 @@
             "value": "CMG.3"
           }
         ],
-        "gender": "male"
+        "gender": "male",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6428,7 +6961,12 @@
             "value": "CMG.4"
           }
         ],
-        "gender": "female"
+        "gender": "female",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6461,7 +6999,12 @@
             "value": "CMG.5"
           }
         ],
-        "gender": "male"
+        "gender": "male",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6494,7 +7037,12 @@
             "value": "CMG.6"
           }
         ],
-        "gender": "female"
+        "gender": "female",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6527,7 +7075,12 @@
             "value": "CMG.7"
           }
         ],
-        "gender": "female"
+        "gender": "female",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       },
       {
         "resourceType": "Patient",
@@ -6560,7 +7113,67 @@
             "value": "CMG.8"
           }
         ],
-        "gender": "male"
+        "gender": "male",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
+      },
+      {
+        "resourceType": "Patient",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2135-2",
+                  "display": "Hispanic or Latino"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Reported Unknown:Italian"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "valueCoding": {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                  "code": "UNK",
+                  "display": "Unknown"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Reported Unknown:Italian"
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ncpi-test:unique-string",
+            "value": "CMG-Patient-9"
+          },
+          {
+            "system": "urn:ncpi-test:Patient",
+            "value": "CMG.9"
+          }
+        ],
+        "gender": "male",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
       }
     ],
     "ResearchStudy": [
@@ -6577,7 +7190,12 @@
           }
         ],
         "title": "FAKE-CMG",
-        "status": "completed"
+        "status": "completed",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
+          ]
+        }
       }
     ],
     "ResearchSubject": [
@@ -6599,6 +7217,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-1"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6619,6 +7242,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-2"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6639,6 +7267,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-3"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6659,6 +7292,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-4"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6679,6 +7317,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-5"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6699,6 +7342,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-6"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6719,6 +7367,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-7"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6739,6 +7392,11 @@
         },
         "individual": {
           "reference": "Patient/CMG-Patient-8"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       },
       {
@@ -6758,7 +7416,12 @@
           "reference": "ResearchStudy/CMG-ResearchStudy-1"
         },
         "individual": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+          ]
         }
       }
     ],
@@ -6777,6 +7440,11 @@
         ],
         "subject": {
           "reference": "Patient/CMG-Patient-1"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6793,6 +7461,11 @@
         ],
         "subject": {
           "reference": "Patient/CMG-Patient-2"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6809,6 +7482,11 @@
         ],
         "subject": {
           "reference": "Patient/CMG-Patient-3"
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6837,6 +7515,11 @@
             ],
             "text": "blood"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6865,6 +7548,11 @@
             ],
             "text": "blood"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6893,6 +7581,11 @@
             ],
             "text": "blood"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6921,6 +7614,11 @@
             ],
             "text": "skin epidermis"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6949,6 +7647,11 @@
             ],
             "text": "skin epidermis"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6964,7 +7667,7 @@
           }
         ],
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
         },
         "collection": {
           "bodySite": {
@@ -6977,6 +7680,11 @@
             ],
             "text": "skin epidermis"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       },
       {
@@ -6992,7 +7700,7 @@
           }
         ],
         "subject": {
-          "reference": "Patient/CMG-Patient-8"
+          "reference": "Patient/CMG-Patient-9"
         },
         "collection": {
           "bodySite": {
@@ -7005,6 +7713,11 @@
             ],
             "text": "skin epidermis"
           }
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Specimen"
+          ]
         }
       }
     ],
@@ -7027,6 +7740,10 @@
         "focus": {
           "reference": "Specimen/CMG-Specimen-1",
           "display": "Specimen"
+        },
+        "for": {
+          "reference": "Patient/CMG-Patient-1",
+          "display": "Subject"
         },
         "authoredOn": "2016-05-26",
         "owner": {
@@ -7076,7 +7793,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-2"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7096,6 +7818,10 @@
         "focus": {
           "reference": "Specimen/CMG-Specimen-2",
           "display": "Specimen"
+        },
+        "for": {
+          "reference": "Patient/CMG-Patient-2",
+          "display": "Subject"
         },
         "authoredOn": "2016-05-26",
         "owner": {
@@ -7145,7 +7871,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-4"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7165,6 +7896,10 @@
         "focus": {
           "reference": "Specimen/CMG-Specimen-3",
           "display": "Specimen"
+        },
+        "for": {
+          "reference": "Patient/CMG-Patient-3",
+          "display": "Subject"
         },
         "authoredOn": "2016-05-26",
         "owner": {
@@ -7214,7 +7949,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-6"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7234,6 +7974,10 @@
         "focus": {
           "reference": "Specimen/CMG-Specimen-4",
           "display": "Specimen"
+        },
+        "for": {
+          "reference": "Patient/CMG-Patient-4",
+          "display": "Subject"
         },
         "authoredOn": "2016-05-26",
         "owner": {
@@ -7283,7 +8027,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-8"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7303,6 +8052,10 @@
         "focus": {
           "reference": "Specimen/CMG-Specimen-5",
           "display": "Specimen"
+        },
+        "for": {
+          "reference": "Patient/CMG-Patient-5",
+          "display": "Subject"
         },
         "authoredOn": "2016-05-26",
         "owner": {
@@ -7352,7 +8105,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-10"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7372,6 +8130,10 @@
         "focus": {
           "reference": "Specimen/CMG-Specimen-6",
           "display": "Specimen"
+        },
+        "for": {
+          "reference": "Patient/CMG-Patient-6",
+          "display": "Subject"
         },
         "authoredOn": "2016-05-26",
         "owner": {
@@ -7421,7 +8183,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-12"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7490,7 +8257,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-14"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7559,7 +8331,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-16"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7628,7 +8405,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-18"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       },
       {
         "resourceType": "Task",
@@ -7697,7 +8479,12 @@
               "reference": "DocumentReference/CMG-DocumentReference-20"
             }
           }
-        ]
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Task"
+          ]
+        }
       }
     ]
   }
