@@ -1,6 +1,6 @@
 
 # The bullet points associated with this set of tests in the evaluation document
-test_set_id = "2.4"
+test_set_id = "2.05"
 
 # User friendly name of the tests
 test_set_name = "Extensions"
