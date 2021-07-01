@@ -12,6 +12,7 @@ from ncpi_fhir_client import fhir_auth
 from fhir_walk.config import DataConfig
 
 from fhireval import __name__ as libpath
+from fhireval.data import delete_test_data, delete_test_model, load_test_model, skip_reprovision
 import fhireval.test_suite
 from fhireval.runner import Runner, __name__ as runner_path
 from collections import defaultdict
@@ -118,6 +119,12 @@ for each of the auth types currently supported.\n"""
         help=f"Remote configuration to be used to access the FHIR server",
     )
     parser.add_argument(
+        "-f",
+        "--force-model-reload",
+        action='store_true',
+        help="Delete's existing model components if they exist. By default, model components that are found to already exist are left alone (so this is only useful if something has changed)"
+    )
+    parser.add_argument(
         "-m",
         "--module",
         choices=module_names,
@@ -127,6 +134,7 @@ for each of the auth types currently supported.\n"""
     )
     parser.add_argument(
         "--show-error-trace",
+        "-err",
         action="store_true",
         help="Permit tests to generate back trace lists for failures (useful only for debugging problems)",
     )
@@ -143,6 +151,12 @@ for each of the auth types currently supported.\n"""
         type=str,
         default="",
         help="Prefix to be used for report files (default is the name provided in RC file for selected environment)",
+    )
+
+    parser.add_argument(
+        "--skip-reprovision",
+        action='store_true',
+        help="Set this to avoid deleting the data and model, followed by reloading data. Useful only for testing modules that don't rely on pre-existing data and can avoid time consuming delete and load steps."
     )
 
     parser.add_argument(
@@ -174,6 +188,9 @@ for each of the auth types currently supported.\n"""
         sys.exit(1)
 
     fhireval.test_suite.fhir_client = FhirClient(host_config[args.env])
+    if args.skip_reprovision:
+        skip_reprovision(True)
+
     # pdb.set_trace()
     # config = DataConfig.config(env=args.env)
     if args.report_prefix.strip() == "":
@@ -197,6 +214,22 @@ for each of the auth types currently supported.\n"""
 
     print(f"Logging to '{logfn}', level {args.log_level}.")
     fhireval.test_suite.fhir_client.init_log()
+
+    # Clear out any pre-existing test data
+    if skip_reprovision():
+        print("Skipping the delete for now")
+    else:
+        delete_test_data(fhireval.test_suite.fhir_client)
+
+    # Optionally purge the model itself, in case we have an updated version
+    if args.force_model_reload:
+        delete_test_model(fhireval.test_suite.fhir_client)
+    # Load the model
+    if skip_reprovision():
+        print("Skipping loading the model, since we are still struggling with the bulk stuff")
+    else:
+        load_test_model(fhireval.test_suite.fhir_client)
+
     if len(args.module) == 0:
         args.module = module_names
 
