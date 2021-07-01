@@ -1,6 +1,6 @@
 
 # The bullet points associated with this set of tests in the evaluation document
-test_set_id = "2.1"
+test_set_id = "2.01"
 
 # User friendly name of the tests
 test_set_name = "Cap. Statement"
