@@ -2,6 +2,7 @@ import pytest
 import pdb
 
 from fhir_walk.model import unwrap_bundle
+from copy import deepcopy
 from fhireval.test_suite.crud import prep_server
 import urllib.parse
 
@@ -17,9 +18,10 @@ def test_create_condition(host, prep_server):
     global example_patient_id, example_condition_id
 
     example_patient = prep_server['CMG']['Patient'][0]
-    example_condition = prep_server['CMG']['Condition'][0]
+    example_condition = deepcopy(prep_server['CMG']['Condition'][0])
     # We shouldn't have loaded profiles at this point, so let's strip
     # the profile out of the condition so that it's just a plain condition
+    #pdb.set_trace()
     del example_condition['meta']
     response = host.post('Patient', example_patient, validate_only=False)
     assert response['status_code'] == 201, 'CREATE success'
@@ -53,6 +55,7 @@ def test_update_condition(host, prep_server):
     example_condition = prep_server['CMG']['Condition'][0]
 
     altered_condition = example_condition.copy()
+    example_condition['subject']['reference'] = f"Patient/{example_patient_id}"
     altered_condition['id'] = example_condition_id
     altered_condition['verificationStatus']['text'] = 'Probably Affected'
     result = host.update('Condition', example_condition_id, altered_condition)

@@ -12,7 +12,7 @@ test_weight = 2
 example_organization_id = None
 
 
-def test_create_research_study(host, prep_server):
+def test_create_organization(host, prep_server):
     global example_organization_id
 
     example_org = prep_server['CMG']['Organization'][0]
@@ -22,7 +22,7 @@ def test_create_research_study(host, prep_server):
     example_organization_id = response['response']['id']
 
 
-def test_read_research_study(host, prep_server):
+def test_read_organization(host, prep_server):
     global example_organization_id
 
     example_org = prep_server['CMG']['Organization'][0]
@@ -33,7 +33,7 @@ def test_read_research_study(host, prep_server):
     assert example_org['name'] == study_query[0]['name'], 'Verify Name matches'
 
 
-def test_update_research_study(host, prep_server):
+def test_update_organization(host, prep_server):
     global example_organization_id
 
     example_org = prep_server['CMG']['Organization'][0]
@@ -50,7 +50,7 @@ def test_update_research_study(host, prep_server):
     assert study_qry[0]['name'] == 'New_Name'
 
 
-def test_patch_research_study(host, prep_server):
+def test_patch_organization(host, prep_server):
     global example_organization_id
 
     patch_ops = [{
@@ -64,7 +64,7 @@ def test_patch_research_study(host, prep_server):
     assert study_qry['name'] == 'YANN - Yet Another New Name'
 
 
-def test_delete_research_study(host, prep_server):
+def test_delete_organization(host, prep_server):
     global example_organization_id
 
     example_org = prep_server['CMG']['Organization'][0]
