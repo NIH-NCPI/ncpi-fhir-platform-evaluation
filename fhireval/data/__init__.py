@@ -77,7 +77,8 @@ _resource_order = [
 _model_resource_order = [
     'CodeSystem',
     'ValueSet',
-    'StructureDefinition'
+    'StructureDefinition',
+    'ImplementationGuide'
 ]
 
 # Some resources don't actually have an id. Here, we'll provide 
@@ -122,7 +123,7 @@ def delete_from_response(host, resource_type, response, sleep_til_gone=True):
         except:
             pass
         delete_result = host.delete_by_record_id(resource_type, id)
-        if delete_result['status_code'] != 409:
+        if delete_result['status_code'] < 300: #!= 409:
             if sleep_til_gone:
                 if 'name' in response['resource']:
                     host.sleep_until(f"{resource_type}?name={response['resource']['name']}", 0)
@@ -221,10 +222,28 @@ def load_test_model(host):
 
     print("Loading Model into memory")
     wait_list = []
+
+    # For the IG, we'll need to replace references id (pre submission) => id
+    ig_id_lookup = {}
     for resource in _model_resource_order:
         if resource in _resource_data['_MODEL']:
             for record in _resource_data['_MODEL'][resource]:
+                if resource == 'ImplementationGuide':
+                    build_references(record, ig_id_lookup)
+                    pdb.set_trace()
+                id = None
+                if "id" in record:
+                    id = record['id']
                 response = host.load(resource, record, validate_only=False, skip_insert_if_present=True)
+                
+                if 'resource' not in response['response']:
+                    if 'id' in response['response']:
+                        new_id = response['response']['id']
+                    else:
+                        pdb.set_trace()
+                else:
+                    new_id = response['response']['resource']['id']
+                ig_id_lookup[id] = new_id
 
                 if response['status_code'] != 201:
                     pdb.set_trace()
@@ -309,13 +328,17 @@ def build_references(record, id_list):
     # so we may need to 
     for key, value in record.items():
         if key == "reference":
-            resource, identifier = value.split("/")
+            if type(value) is dict:
+                if not build_references(value, id_list):
+                    return False
+            else:
+                resource, identifier = value.split("/")
 
-            if identifier not in id_list:
-                print(identifier)
-                return False
+                if identifier not in id_list:
+                    print(identifier)
+                    return False
 
-            record[key] = f"{resource}/{id_list[identifier]}"
+                record[key] = f"{resource}/{id_list[identifier]}"
         else:
             if type(value) is list:
                 for item in value:
