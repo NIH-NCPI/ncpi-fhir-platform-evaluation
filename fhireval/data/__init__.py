@@ -245,7 +245,7 @@ def load_test_model(host):
                     new_id = response['response']['resource']['id']
                 ig_id_lookup[id] = new_id
 
-                if response['status_code'] != 201:
+                if response['status_code'] >= 300:
                     pdb.set_trace()
                     print(resource)
                     print(response)
@@ -261,15 +261,26 @@ def delete_test_model(host):
     print("Deleting the previous test model if present")
 
     wait_list = []
+    errors_encountered = []
     for resource in _model_resource_order[::-1]:
         if resource in _resource_data['_MODEL']:
             for record in _resource_data['_MODEL'][resource]:
                 print(f"Deleting {resource} by name: {record['name']}")
-                delete_content_by_name(host, resource, record, sleep_til_gone=False)
+                responses = delete_content_by_name(host, resource, record, sleep_til_gone=False)
+
+                for response in response:
+                    if response['status_code'] >= 300:
+                        errors_encountered.append(response)
+
                 qry = f"{resource}?name={record['name']}"
                 # Make sure the database has caught up before proceeding
                 wait_list.append(qry)
 
+    if len(errors_encountered) > 0:
+        pdb.set_trace()
+        for response in errors_encountered:
+            print(response)
+        print(f"{len(errors_encountered)} errors were encountered during clearing model")
     print("Waiting for previous model cleanup to complete")
     for qry in wait_list:
         print(qry)
@@ -409,7 +420,7 @@ def reprovision_server(host):
                     if build_references(record, _inserted_id_list):
                         response = host.post(resource, record, validate_only=False)
 
-                        if response['status_code'] != 201:
+                        if response['status_code'] >= 300:
                             pdb.set_trace()
                             print(resource)
                             print(pformat(response))
