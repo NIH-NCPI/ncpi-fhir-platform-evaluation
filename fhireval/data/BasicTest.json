@@ -1,328 +1,332 @@
 {
-	"groupname": "BasicTest",
-	"datatype": "TestOnly",
-	"resources": {
-		"Patient" : [
-			{
-				"resourceType": "Patient",
-				"extension": [
-				  {
-					"url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
-					"extension": [
-					  {
-						"url": "ombCategory",
-						"valueCoding": {
-						  "system": "urn:oid:2.16.840.1.113883.6.238",
-						  "code": "2028-9",
-						  "display": "Asian"
-						}
-					  },
-					  {
-						"url": "text",
-						"valueString": "Asian:Middle Eastern (from the United Arab Emirates)"
-					  }
-					]
-				  }, {
-					"url": "https://ncpi-fhir.github.io/StructureDefinition/visit-number",
-					"valueInteger": 1
-				  }
-				],
-				"identifier": [
-				  {
-					"system": "urn:ncpi-test:unique-string",
-					"value": "TEST-Patient-1"
-				  }
-				],
-				"meta": {
-				  "profile": [
-					"http://hl7.org/fhir/StructureDefinition/Patient"
-				  ]
-				}
-			  }
-		],
-		"Observation": [
-			{
-				"resourceType": "Observation",
-				"extension": [
-				  {
-					"url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
-					"valueInteger": 1
-				  }
-				],
-				"identifier": [
-				  {
-					"system": "urn:ncpi-test:unique-string",
-					"value": "BasicTest-Observation-1"
-				  }
-				],
-				"status": "final",
-				"code": {
-				  "coding": [
-					{
-					  "system": "http://loinc.org",
-					  "code": "8302-2",
-					  "display": "Body height"
-					},
-					{
-					  "system": "https://www.ohdsi.org",
-					  "code": "3036277",
-					  "display": "Body height"
-					}
-				  ],
-				  "text": "Body height"
-				},
-				"subject": {
-				  "reference": "Patient/TEST-Patient-1"
-				},
-				"_effectiveDateTime": {
-				  "extension": [
-					{
-					  "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
-					  "extension": [
-						{
-						  "url": "target",
-						  "valueReference": {
-							"reference": "Patient/TEST-Patient-1"
-						  }
-						},
-						{
-						  "url": "targetPath",
-						  "valueString": "birthDate"
-						},
-						{
-						  "url": "relationship",
-						  "valueCode": "after"
-						},
-						{
-						  "url": "offset",
-						  "valueDuration": {
-							"value": 1.911,
-							"unit": "a",
-							"system": "http://unitsofmeasure.org",
-							"code": "years"
-						  }
-						}
-					  ]
-					}
-				  ]
-				},
-				"valueQuantity": {
-				  "value": 165.74710439786688,
-				  "unit": "cm",
-				  "system": "http://unitsofmeasure.org",
-				  "code": "cm"
-				}
-			  },
-			  {
-				"resourceType": "Observation",
-				"extension": [
-				  {
-					"url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
-					"valueInteger": 1
-				  }
-				],
-				"identifier": [
-				  {
-					"system": "urn:ncpi-test:unique-string",
-					"value": "BasicTest-Observation-2"
-				  }
-				],
-				"status": "final",
-				"code": {
-				  "coding": [
-					{
-					  "system": "http://loinc.org",
-					  "code": "29463-7",
-					  "display": "Body weight"
-					},
-					{
-					  "system": "https://www.ohdsi.org",
-					  "code": "3025315",
-					  "display": "Body weight"
-					}
-				  ],
-				  "text": "Body weight"
-				},
-				"subject": {
-				  "reference": "Patient/TEST-Patient-1"
-				},
-				"_effectiveDateTime": {
-				  "extension": [
-					{
-					  "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
-					  "extension": [
-						{
-						  "url": "target",
-						  "valueReference": {
-							"reference": "Patient/TEST-Patient-1"
-						  }
-						},
-						{
-						  "url": "targetPath",
-						  "valueString": "birthDate"
-						},
-						{
-						  "url": "relationship",
-						  "valueCode": "after"
-						},
-						{
-						  "url": "offset",
-						  "valueDuration": {
-							"value": 1.911,
-							"unit": "a",
-							"system": "http://unitsofmeasure.org",
-							"code": "years"
-						  }
-						}
-					  ]
-					}
-				  ]
-				},
-				"valueQuantity": {
-				  "value": 73.13492574157895,
-				  "unit": "kg",
-				  "system": "http://unitsofmeasure.org",
-				  "code": "kg"
-				}
-			  },
-			  {
-				"resourceType": "Observation",
-				"extension": [
-				  {
-					"url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
-					"valueInteger": 1
-				  }
-				],
-				"identifier": [
-				  {
-					"system": "urn:ncpi-test:unique-string",
-					"value": "BasicTest-Observation-3"
-				  }
-				],
-				"status": "final",
-				"code": {
-				  "coding": [
-					{
-					  "system": "http://loinc.org",
-					  "code": "39156-5",
-					  "display": "Body mass index (BMI) [Ratio]"
-					},
-					{
-					  "system": "https://www.ohdsi.org",
-					  "code": "3038553",
-					  "display": "Body mass index (BMI) [Ratio]"
-					}
-				  ],
-				  "text": "Body mass index (BMI) [Ratio]"
-				},
-				"subject": {
-				  "reference": "Patient/TEST-Patient-1"
-				},
-				"_effectiveDateTime": {
-				  "extension": [
-					{
-					  "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
-					  "extension": [
-						{
-						  "url": "target",
-						  "valueReference": {
-							"reference": "Patient/TEST-Patient-1"
-						  }
-						},
-						{
-						  "url": "targetPath",
-						  "valueString": "birthDate"
-						},
-						{
-						  "url": "relationship",
-						  "valueCode": "after"
-						},
-						{
-						  "url": "offset",
-						  "valueDuration": {
-							"value": 1.911,
-							"unit": "a",
-							"system": "http://unitsofmeasure.org",
-							"code": "years"
-						  }
-						}
-					  ]
-					}
-				  ]
-				},
-				"valueQuantity": {
-				  "value": 26.621524665624275,
-				  "unit": "kg/m2",
-				  "system": "http://unitsofmeasure.org",
-				  "code": "kg/m2"
-				},
-				"derivedFrom": [
-				  {
-					"reference": "Observation/BasicTest-Observation-1"
-				  },
-				  {
-					"reference": "Observation/BasicTest-Observation-2"
-				  }
-				]
-			  }
-		],
-		"Extension": [ {
-			"resourceType": "StructureDefinition",
-			"id": "visit-number",
-			"url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
-			"version": "0.0.1",
-			"name": "visit_number",
-			"status": "draft",
-			"date" : "2021-01-18",
-			"publisher": "NCPI",
-			"fhirVersion": "4.0.0",
-			"kind": "complex-type",
-			"abstract": false,
-			"context": [
-				{
-				"type" : "element",
-				  "expression": "Observation"
-				}
-			],
-			"type": "Extension",
-			"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-			"derivation": "constraint",
-			"differential": {
-			  "element": [
-				{
-				  "id": "Extension",
-				  "path": "Extension",
-				  "short": "Visit Number",
-				  "definition": "Visit Number for a given type of observation",
-				  "min": 0,
-				  "max": "1",
-				  "mustSupport": true,
-				  "isModifier": false
-				},
-				{
-				  "id": "Extension.extension",
-				  "path": "Extension.extension"
-				},
-				{
-				  "id": "Extension.url",
-				  "path": "Extension.url",
-				  "type": [
-					{
-					  "code": "uri"
-					}
-				  ],
-				  "fixedUri": "http://ncpi-fhir.github.io/StructureDefinition/visit-number"
-				},
-				{
-				  "id": "Extension.value[x]",
-				  "path": "Extension.value[x]",
-				  "type": [{
-					  "code": "integer"
-				  }]
-				}
-			  ]
-			}
-		  }
-	   ]
-	}
+  "groupname": "BasicTest",
+  "datatype": "TestOnly",
+  "resources": {
+    "Patient": [
+      {
+        "resourceType": "Patient",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "ombCategory",
+                "valueCoding": {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2028-9",
+                  "display": "Asian"
+                }
+              },
+              {
+                "url": "text",
+                "valueString": "Asian:Middle Eastern (from the United Arab Emirates)"
+              }
+            ]
+          },
+          {
+            "url": "https://ncpi-fhir.github.io/StructureDefinition/visit-number",
+            "valueInteger": 1
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ncpi-test:unique-string",
+            "value": "TEST-Patient-1"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Patient"
+          ]
+        }
+      }
+    ],
+    "Observation": [
+      {
+        "resourceType": "Observation",
+        "extension": [
+          {
+            "url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
+            "valueInteger": 1
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ncpi-test:unique-string",
+            "value": "BasicTest-Observation-1"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body height"
+            },
+            {
+              "system": "https://www.ohdsi.org",
+              "code": "3036277",
+              "display": "Body height"
+            }
+          ],
+          "text": "Body height"
+        },
+        "subject": {
+          "reference": "Patient/TEST-Patient-1"
+        },
+        "_effectiveDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
+              "extension": [
+                {
+                  "url": "target",
+                  "valueReference": {
+                    "reference": "Patient/TEST-Patient-1"
+                  }
+                },
+                {
+                  "url": "targetPath",
+                  "valueString": "birthDate"
+                },
+                {
+                  "url": "relationship",
+                  "valueCode": "after"
+                },
+                {
+                  "url": "offset",
+                  "valueDuration": {
+                    "value": 1.911,
+                    "unit": "years",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 165.74710439786688,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      {
+        "resourceType": "Observation",
+        "extension": [
+          {
+            "url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
+            "valueInteger": 1
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ncpi-test:unique-string",
+            "value": "BasicTest-Observation-2"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body weight"
+            },
+            {
+              "system": "https://www.ohdsi.org",
+              "code": "3025315",
+              "display": "Body weight"
+            }
+          ],
+          "text": "Body weight"
+        },
+        "subject": {
+          "reference": "Patient/TEST-Patient-1"
+        },
+        "_effectiveDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
+              "extension": [
+                {
+                  "url": "target",
+                  "valueReference": {
+                    "reference": "Patient/TEST-Patient-1"
+                  }
+                },
+                {
+                  "url": "targetPath",
+                  "valueString": "birthDate"
+                },
+                {
+                  "url": "relationship",
+                  "valueCode": "after"
+                },
+                {
+                  "url": "offset",
+                  "valueDuration": {
+                    "value": 1.911,
+                    "unit": "years",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 73.13492574157895,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      {
+        "resourceType": "Observation",
+        "extension": [
+          {
+            "url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
+            "valueInteger": 1
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:ncpi-test:unique-string",
+            "value": "BasicTest-Observation-3"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "39156-5",
+              "display": "Body mass index (BMI) [Ratio]"
+            },
+            {
+              "system": "https://www.ohdsi.org",
+              "code": "3038553",
+              "display": "Body mass index (BMI) [Ratio]"
+            }
+          ],
+          "text": "Body mass index (BMI) [Ratio]"
+        },
+        "subject": {
+          "reference": "Patient/TEST-Patient-1"
+        },
+        "_effectiveDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-relativeDateTime",
+              "extension": [
+                {
+                  "url": "target",
+                  "valueReference": {
+                    "reference": "Patient/TEST-Patient-1"
+                  }
+                },
+                {
+                  "url": "targetPath",
+                  "valueString": "birthDate"
+                },
+                {
+                  "url": "relationship",
+                  "valueCode": "after"
+                },
+                {
+                  "url": "offset",
+                  "valueDuration": {
+                    "value": 1.911,
+                    "unit": "years",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "a"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 26.621524665624275,
+          "unit": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg/m2"
+        },
+        "derivedFrom": [
+          {
+            "reference": "Observation/BasicTest-Observation-1"
+          },
+          {
+            "reference": "Observation/BasicTest-Observation-2"
+          }
+        ]
+      }
+    ],
+    "Extension": [
+      {
+        "resourceType": "StructureDefinition",
+        "id": "visit-number",
+        "url": "http://ncpi-fhir.github.io/StructureDefinition/visit-number",
+        "version": "0.0.1",
+        "name": "VisitNumber",
+        "status": "draft",
+        "date": "2021-01-18",
+        "publisher": "NCPI",
+        "fhirVersion": "4.0.0",
+        "kind": "complex-type",
+        "abstract": false,
+        "context": [
+          {
+            "type": "element",
+            "expression": "Observation"
+          }
+        ],
+        "type": "Extension",
+        "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+        "derivation": "constraint",
+        "differential": {
+          "element": [
+            {
+              "id": "Extension",
+              "path": "Extension",
+              "short": "Visit Number",
+              "definition": "Visit Number for a given type of observation",
+              "min": 0,
+              "max": "1",
+              "mustSupport": true,
+              "isModifier": false
+            },
+            {
+              "id": "Extension.extension",
+              "path": "Extension.extension"
+            },
+            {
+              "id": "Extension.url",
+              "path": "Extension.url",
+              "type": [
+                {
+                  "code": "uri"
+                }
+              ],
+              "fixedUri": "http://ncpi-fhir.github.io/StructureDefinition/visit-number"
+            },
+            {
+              "id": "Extension.value[x]",
+              "path": "Extension.value[x]",
+              "type": [
+                {
+                  "code": "integer"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
