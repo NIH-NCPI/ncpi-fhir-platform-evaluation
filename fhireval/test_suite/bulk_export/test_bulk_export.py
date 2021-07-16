@@ -14,17 +14,17 @@ test_weight = 2
 def bulk_export(host, endpt = None, resources=None):
     # Request our data to be fhir+json separated by new lines
     if endpt is None or endpt == "":
-        endpoint = "$export?_outputFormat=application%2Ffhir%2Bndjson"
+        endpoint = "$export?_outputFormat=application/fhir%2Bndjson"
     else:
-        endpoint = f"{endpt}/$export?_outputFormat=application/fhir+ndjson"
+        endpoint = f"{endpt}/$export?_outputFormat=application/fhir%2Bndjson"
 
     # We need to specify our types as comma separated list
     if resources is not None and len(resources) > 0:
         endpoint = f"{endpoint}&_type={','.join(resources)}"
 
     reqargs = {'headers': {
-        'Prefer': 'respond-async',
-        'Accept': 'application/fhir+json'}
+        'Prefer': 'respond-async'
+        }
     }
     print(f"Attempting to export in bulk: {endpoint} \n\tWith headers: {reqargs['headers']}")
     result = host.get(endpoint, reqargs=reqargs, raw_result=True)
