@@ -68,9 +68,3 @@ def test_querying_for_extension(host, prep_server):
     entries = host.get(f"StructureDefinition?url={_profile_url}").entries
     assert len(entries) == 1, "Should be one extension"
 
-
-
-
-
-
-
