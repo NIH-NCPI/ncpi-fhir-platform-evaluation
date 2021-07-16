@@ -20,23 +20,32 @@ _params_to_ignore = ['meta', 'id']
 # Simple tests for identity
 @pytest.mark.parametrize("resource", ["Patient", "Observation", "Condition", "ResearchSubject", "ResearchStudy"])
 def test_search_by_identifier(host, prep_server, resource):
-    example_resource = prep_server['_ALL'][resource][0]
+    # Find a resource with no "|" in it's root identifier
+    example_resource = None
+
+    for example in prep_server['_ALL'][resource]:
+        if "|" not in example['identifier'][0] and 'system' in example['identifier'][0]:
+            example_resource = example
+            break
+    
+    assert example_resource is not None, "Make sure we could find an acceptable resource"
     example_system = example_resource['identifier'][0]['system']
+
+    assert example_system is not None, "Make sure our system does exist"
     example_identity = example_resource['identifier'][0]['value']
 
     # Simple query based on the value
     # This only works if there isn't a "|" in the identifier, otherwise, that first part will 
     # be compared to the system. 
-    if "|" not in example_identity:
-        qry_response = host.get(f"{resource}?identifier={example_identity}").entries
-        assert len(qry_response) == 1, f"Only one record returned (got {len(qry_response)}"
-        fhir_record = qry_response[0]
-        
-        for key in example_resource.keys():
-            if key not in _params_to_ignore:
-                if 'resource' not in fhir_record:
-                    pdb.set_trace()
-                assert example_resource[key] == fhir_record['resource'][key], f"Testing for attribute {key}"
+    qry_response = host.get(f"{resource}?identifier={example_identity}").entries
+    assert len(qry_response) == 1, f"Only one record returned (got {len(qry_response)}"
+    fhir_record = qry_response[0]
+    
+    for key in example_resource.keys():
+        if key not in _params_to_ignore:
+            if 'resource' not in fhir_record:
+                pdb.set_trace()
+            assert example_resource[key] == fhir_record['resource'][key], f"Testing for attribute {key}"
 
     # Simple query based on system|value
     qry_response = host.get(f"{resource}?identifier={example_system}|{example_identity}").entries
