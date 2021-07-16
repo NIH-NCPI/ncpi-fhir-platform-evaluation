@@ -11,22 +11,25 @@ test_weight = 2
 
 # Cache the ID to simplify calls made after crate
 example_group_id = None
-
+example_group = None
 
 def test_create_group(host, prep_server):
-    global example_group_id
+    global example_group_id, example_group
 
-    example_group = prep_server['Common-Examples']['Group'][0]
+    for group in prep_server['CMG']['Group']:
+        if group['type'] == 'animal':
+            example_group = group
+            break
+
+    assert example_group is not None, "Make sure our test was found"
     response = host.post('Group', example_group, validate_only=False)
-
     assert response['status_code'] == 201, 'CREATE success'
     example_group_id = response['response']['id']
 
 
 def test_read_group(host, prep_server):
-    global example_group_id
+    global example_group_id, example_group
 
-    example_group = prep_server['Common-Examples']['Group'][0]
     study_query = host.get(f"Group/{example_group_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -37,9 +40,8 @@ def test_read_group(host, prep_server):
 
 
 def test_update_group(host, prep_server):
-    global example_group_id
+    global example_group_id, example_group
 
-    example_group = prep_server['Common-Examples']['Group'][0]
     altered_study = example_group.copy()
 
     altered_study['type'] = 'device'
@@ -53,7 +55,7 @@ def test_update_group(host, prep_server):
 
 
 def test_patch_group(host, prep_server):
-    global example_group_id
+    global example_group_id, example_group
 
     patch_ops = [{"op": "replace", "path": "/name", "value": "YANN"}]
     result = host.patch('Group', example_group_id, patch_ops)
@@ -63,12 +65,13 @@ def test_patch_group(host, prep_server):
 
 
 def test_delete_group(host, prep_server):
-    global example_group_id
+    global example_group_id, example_group
 
-    example_group = prep_server['Common-Examples']['Group'][0]
     example_identifier = example_group['identifier'][0]
 
     delete_result = host.delete_by_record_id('Group', example_group_id)
+    if delete_result['status_code'] != 200:
+        pdb.set_trace()
     assert delete_result['status_code'] == 200
     response = host.get(f"Group?identifier={example_identifier}").response
     del_query = unwrap_bundle(response)

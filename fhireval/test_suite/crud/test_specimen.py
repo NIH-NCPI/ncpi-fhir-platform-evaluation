@@ -15,8 +15,8 @@ example_specimen_id = None
 def test_create_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_specimen = prep_server['CMG-Examples']['Specimen'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
+    example_specimen = prep_server['CMG']['Specimen'][0]
     response = host.post('Patient', example_patient, validate_only=False)
     assert response['status_code'] == 201, 'CREATE success'
     example_patient_id = response['response']['id']
@@ -32,7 +32,7 @@ def test_create_specimen(host, prep_server):
 def test_read_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
 
-    example_specimen = prep_server['CMG-Examples']['Specimen'][0]
+    example_specimen = prep_server['CMG']['Specimen'][0]
 
     study_query = host.get(f"Specimen/{example_specimen_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
@@ -45,7 +45,7 @@ def test_read_specimen(host, prep_server):
 def test_update_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
 
-    example_specimen = prep_server['CMG-Examples']['Specimen'][0]
+    example_specimen = prep_server['CMG']['Specimen'][0]
 
     altered_specimen = example_specimen.copy()
     altered_specimen['identifier'][1]['value'] = 'new-identifier'
@@ -72,7 +72,7 @@ def test_patch_specimen(host, prep_server):
 def test_delete_specimen(host, prep_server):
     global example_patient_id, example_specimen_id
 
-    example_specimen = prep_server['CMG-Examples']['Specimen'][0]
+    example_specimen = prep_server['CMG']['Specimen'][0]
     example_identifier = example_specimen['identifier'][0]
 
     delete_result = host.delete_by_record_id('Specimen', example_specimen_id)

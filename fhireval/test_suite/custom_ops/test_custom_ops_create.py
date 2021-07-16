@@ -1,7 +1,7 @@
 import pytest
 import pdb
 
-test_id = f"{'2.9.1':10} - Define Custom Operations"
+test_id = f"{'2.6.1':10} - Define Custom Operations"
 
 test_weight = 2
 

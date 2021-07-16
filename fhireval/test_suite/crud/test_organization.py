@@ -12,20 +12,20 @@ test_weight = 2
 example_organization_id = None
 
 
-def test_create_research_study(host, prep_server):
+def test_create_organization(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     response = host.post('Organization', example_org, validate_only=False)
 
     assert response['status_code'] == 201, 'CREATE success'
     example_organization_id = response['response']['id']
 
 
-def test_read_research_study(host, prep_server):
+def test_read_organization(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     study_query = host.get(f"Organization/{example_organization_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -33,10 +33,10 @@ def test_read_research_study(host, prep_server):
     assert example_org['name'] == study_query[0]['name'], 'Verify Name matches'
 
 
-def test_update_research_study(host, prep_server):
+def test_update_organization(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     altered_study = example_org.copy()
 
     altered_study['name'] = 'New_Name'
@@ -50,7 +50,7 @@ def test_update_research_study(host, prep_server):
     assert study_qry[0]['name'] == 'New_Name'
 
 
-def test_patch_research_study(host, prep_server):
+def test_patch_organization(host, prep_server):
     global example_organization_id
 
     patch_ops = [{
@@ -64,10 +64,10 @@ def test_patch_research_study(host, prep_server):
     assert study_qry['name'] == 'YANN - Yet Another New Name'
 
 
-def test_delete_research_study(host, prep_server):
+def test_delete_organization(host, prep_server):
     global example_organization_id
 
-    example_org = prep_server['CMG-Examples']['Organization'][0]
+    example_org = prep_server['CMG']['Organization'][0]
     example_identifier = example_org['identifier'][0]
 
     delete_result = host.delete_by_record_id('Organization',

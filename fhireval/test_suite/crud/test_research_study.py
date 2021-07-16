@@ -16,7 +16,7 @@ example_study_id = None
 def test_create_research_study(host, prep_server):
     global example_study_id
 
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
+    example_study = prep_server['CMG']['ResearchStudy'][0]
     response = host.post('ResearchStudy', example_study, validate_only=False)
 
     assert response['status_code'] == 201, 'CREATE success'
@@ -26,7 +26,7 @@ def test_create_research_study(host, prep_server):
 def test_read_research_study(host, prep_server):
     global example_study_id
 
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
+    example_study = prep_server['CMG']['ResearchStudy'][0]
     study_query = host.get(f"ResearchStudy/{example_study_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -39,7 +39,7 @@ def test_read_research_study(host, prep_server):
 def test_update_research_study(host, prep_server):
     global example_study_id
 
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
+    example_study = prep_server['CMG']['ResearchStudy'][0]
     altered_study = example_study.copy()
 
     altered_study['title'] = 'New-Title'
@@ -69,7 +69,7 @@ def test_patch_research_study(host, prep_server):
 def test_delete_research_study(host, prep_server):
     global example_study_id
 
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
+    example_study = prep_server['CMG']['ResearchStudy'][0]
     example_identifier = example_study['identifier'][0]
 
     delete_result = host.delete_by_record_id('ResearchStudy', example_study_id)

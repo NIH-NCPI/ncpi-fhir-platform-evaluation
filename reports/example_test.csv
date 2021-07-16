@@ -3,51 +3,49 @@ Cap. Statement,2.1.1      - Resource Interaction,1.7777777777777777,2,0.88888888
 Cap. Statement,"2.1.2      - Conditional Create, Upd & Del",4.444444444444445,5,0.8888888888888888,104,13,117
 Cap. Statement,2.1.3      - Search Includes,1.1111111111111112,2,0.5555555555555556,65,52,117
 Cap. Statement,2.1.4      - Resource Search Params,0.717948717948718,2,0.358974358974359,42,75,117
-Cap. Statement,2.1        - Cap. Statement (Summary),8.051282051282051,11,0.8104118104118104,1043,244,1287
-Search,2.2.1.1    - Core FHIR Search,15.0,15,1.0,1,0,1
-Search,2.2.1.2    - Search Modifiers and Prefix,0.0,15,0.0,0,4,4
-Search,2.2.1.3    - Hierarchical Search,0.0,15,0.0,0,2,2
-Search,2.2.1.4    - Chaining,0.0,8,0.0,0,2,2
-Search,2.2.1.5    - Reverse Chaining,0.0,5,0.0,0,2,2
-Search,2.2.1.6    - Missingness,0.0,8,0.0,0,1,1
-Search,2.2.1.7    - Composite Search,0.0,9,0.0,0,2,2
-Search,2.2.1.8    - _query,0.0,8,0.0,0,2,2
-Search,2.2.1.9.1  - Sorting,0.0,3,0.0,0,2,2
-Search,2.2.1.9.2  - Paging,0.0,8,0.0,0,2,2
-Search,2.2.1      - Search (Summary),15.0,94,0.05,1,19,20
-Search Params,2.2.2.1    - Basic Search Params,0.0,3,0.0,0,2,2
-Search Params,2.2.2      - Search Params (Summary),0.0,3,0.0,0,2,2
-Profiling,2.3.1      - Profile Creation,0.0,25,0.0,0,1,1
-Profiling,2.3.1      - Profile Validation,0.0,25,0.0,0,1,1
+Cap. Statement,2.01       - Cap. Statement (Summary),8.051282051282051,11,0.8104118104118104,1043,244,1287
+CRUD,2.2.01     - CRUD Research Study ,2.0,2,1.0,5,0,5
+CRUD,2.2.02     - CRUD Patient,2.0,2,1.0,5,0,5
+CRUD,2.2.03     - CRUD Research Subject,2.0,2,1.0,5,0,5
+CRUD,2.2.04     - CRUD Organization ,2.0,2,1.0,5,0,5
+CRUD,2.2.05     - CRUD Specimen,2.0,2,1.0,5,0,5
+CRUD,2.2.06     - CRUD Observation,2.0,2,1.0,5,0,5
+CRUD,2.2.08     - CRUD Condition,2.0,2,1.0,5,0,5
+CRUD,2.2.09     - CRUD Research practitioner ,2.0,2,1.0,5,0,5
+CRUD,2.2.10     - CRUD PractionerRole,2.0,2,1.0,5,0,5
+CRUD,2.2.11     - CRUD Document Reference,2.0,2,1.0,5,0,5
+CRUD,2.2.12     - CRUD Task,2.0,2,1.0,5,0,5
+CRUD,2.2.13     - CRUD Group,2.0,2,1.0,5,0,5
+CRUD,2.02       - CRUD (Summary),24.0,24,1.0,60,0,60
+Profiling,2.3.1      - Profile Creation,25.0,25,1.0,1,0,1
+Profiling,2.3.1      - Profile Validation,25.0,25,1.0,1,0,1
 Profiling,2.3.3      - Profile Snapshot,0.0,10,0.0,0,1,1
-Profiling,2.3        - Profiling (Summary),0.0,60,0.0,0,3,3
-Extensions,2.4.1      - Extension Creation,0.0,2,0.0,0,1,1
-Extensions,2.4.2      - Extensions Validated,0.0,4,0.0,0,1,1
-Extensions,2.4.3      - Extensions Queried,0.0,5,0.0,0,1,1
-Extensions,2.4        - Extensions (Summary),0.0,11,0.0,0,3,3
-CRUD,2.5.01     - CRUD Research Study ,2.0,2,1.0,5,0,5
-CRUD,2.5.02     - CRUD Patient,2.0,2,1.0,5,0,5
-CRUD,2.5.03     - CRUD Research Subject,2.0,2,1.0,5,0,5
-CRUD,2.5.04     - CRUD Organization ,2.0,2,1.0,5,0,5
-CRUD,2.5.05     - CRUD Specimen,2.0,2,1.0,5,0,5
-CRUD,2.5.06     - CRUD Observation,2.0,2,1.0,5,0,5
-CRUD,2.5.08     - CRUD Condition,2.0,2,1.0,5,0,5
-CRUD,2.5.09     - CRUD Research practitioner ,2.0,2,1.0,5,0,5
-CRUD,2.5.10     - CRUD PractionerRole,2.0,2,1.0,5,0,5
-CRUD,2.5.11     - CRUD Document Reference,2.0,2,1.0,5,0,5
-CRUD,2.5.12     - CRUD Task,2.0,2,1.0,5,0,5
-CRUD,2.5.13     - CRUD Group,2.0,2,1.0,5,0,5
-CRUD,2.5        - CRUD (Summary),24.0,24,1.0,60,0,60
-Bulk Export,2.6.1      - Bulk Export ,0.0,2,0.0,0,1,1
-Bulk Export,2.6        - Bulk Export (Summary),0.0,2,0.0,0,1,1
-Terminologies,2.7.1      - Validate Terms at Load,0.0,2,0.0,0,1,1
+Profiling,2.03       - Profiling (Summary),50.0,60,0.6666666666666666,2,1,3
+ConceptMap,2.4.1      - Create ConceptMap,2.0,2,1.0,1,0,1
+ConceptMap,2.4.2      - ConceptMap Translate,2.0,2,1.0,1,0,1
+ConceptMap,2.04       - ConceptMap (Summary),4.0,4,1.0,2,0,2
+Extensions,2.5.1      - Extension Creation,2.0,2,1.0,3,0,3
+Extensions,2.05       - Extensions (Summary),2.0,2,1.0,3,0,3
+Custom Ops,2.6.1      - Define Custom Operations,0.0,2,0.0,0,1,1
+Custom Ops,2.6.2      - Custom Ops Outcome,0.0,2,0.0,0,1,1
+Custom Ops,2.6.3      - _query,0.0,8,0.0,0,1,1
+Custom Ops,2.06       - Custom Ops (Summary),0.0,12,0.0,0,3,3
+Terminologies,2.7.1      - Validate Terms at Load,2.0,2,1.0,2,0,2
 Terminologies,2.7.2      - Support Ext. Term Server,0.0,2,0.0,0,1,1
 Terminologies,2.7.3      - Can Be Term Server,0.0,2,0.0,0,1,1
-Terminologies,2.7        - Terminologies (Summary),0.0,6,0.0,0,3,3
-ConceptMap,2.8.1      - Create ConceptMap,2.0,2,1.0,1,0,1
-ConceptMap,2.8.2      - ConceptMap Translate,2.0,2,1.0,1,0,1
-ConceptMap,2.8        - ConceptMap (Summary),4.0,4,1.0,2,0,2
-Custom Ops,2.9.1      - Define Custom Operations,0.0,2,0.0,0,1,1
-Custom Ops,2.9.2      - Custom Ops Outcome,0.0,2,0.0,0,1,1
-Custom Ops,2.9        - Custom Ops (Summary),0.0,4,0.0,0,2,2
-example_test Final Score,Final Score,41.61452991452991,219,0.7997107736804049,1106,277,1383
+Terminologies,2.07       - Terminologies (Summary),2.0,6,0.5,2,2,4
+Search Params,2.08.1     - Basic Search Params,3.0,3,1.0,1,0,1
+Search Params,2.08       - Search Params (Summary),3.0,3,1.0,1,0,1
+Bulk Export,2.9.1      - Bulk Export ,1.6923076923076923,2,0.8461538461538461,11,2,13
+Bulk Export,2.09       - Bulk Export (Summary),1.6923076923076923,2,0.8461538461538461,11,2,13
+Core Search,2.10.1.1   - Core FHIR Search,15.0,15,1.0,22,0,22
+Core Search,2.10.1.2   - Search Modifiers and Prefix,15.0,15,1.0,5,0,5
+Core Search,2.10.1.3   - Hierarchical Search,7.5,15,0.5,1,1,2
+Core Search,2.10.1.4   - Chaining,8.0,8,1.0,1,0,1
+Core Search,2.10.1.5   - Reverse Chaining,5.0,5,1.0,1,0,1
+Core Search,2.10.1.6   - Missingness,8.0,8,1.0,1,0,1
+Core Search,2.10.1.7   - Composite Search,9.0,9,1.0,1,0,1
+Core Search,2.10.1.9.1 - Sorting,3.0,3,1.0,2,0,2
+Core Search,2.10.1.9.2 - Paging,8.0,8,1.0,1,0,1
+Core Search,2.10.1     - Core Search (Summary),78.5,86,0.9722222222222222,35,1,36
+example_test Final Score,Final Score,170.21794871794873,210,0.8208215297450425,1159,253,1412

@@ -1,7 +1,7 @@
 import pytest
 import pdb
 
-test_id = f"{'2.9.2':<10} - Custom Ops Outcome"
+test_id = f"{'2.6.2':<10} - Custom Ops Outcome"
 
 test_weight = 2
 

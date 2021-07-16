@@ -18,9 +18,9 @@ example_patient_id = None
 def test_create_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
-    example_patient = prep_server['CMG-Examples']['Patient'][0]
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
-    example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
+    example_patient = prep_server['CMG']['Patient'][0]
+    example_study = prep_server['CMG']['ResearchStudy'][0]
+    example_subject = prep_server['CMG']['ResearchSubject'][0]
 
     response = host.post('ResearchStudy', example_study, validate_only=False)
     assert response['status_code'] == 201, 'CREATE success'
@@ -45,7 +45,7 @@ def test_create_research_subject(host, prep_server):
 def test_read_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
-    example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
+    example_subject = prep_server['CMG']['ResearchSubject'][0]
     study_query = host.get(f"ResearchSubject/{example_subject_id}").entries
     assert len(study_query) == 1, "READ Success and only one was found"
 
@@ -57,7 +57,7 @@ def test_read_research_subject(host, prep_server):
 def test_update_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
-    example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
+    example_subject = prep_server['CMG']['ResearchSubject'][0]
 
     altered_subject = example_subject.copy()
     altered_subject['identifier'][1]['value'] = 'new-identifier-nine'
@@ -84,10 +84,10 @@ def test_patch_research_subject(host, prep_server):
 def test_delete_research_subject(host, prep_server):
     global example_study_id, example_subject_id, example_patient_id
 
-    example_subject = prep_server['CMG-Examples']['ResearchSubject'][0]
+    example_subject = prep_server['CMG']['ResearchSubject'][0]
     example_identifier = example_subject['identifier'][0]
 
-    example_study = prep_server['CMG-Examples']['ResearchStudy'][0]
+    example_study = prep_server['CMG']['ResearchStudy'][0]
     example_identifier = example_study['identifier'][0]
 
     delete_result = host.delete_by_record_id('ResearchSubject',

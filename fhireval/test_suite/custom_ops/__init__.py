@@ -1,6 +1,6 @@
 
 # The bullet points associated with this set of tests in the evaluation document
-test_set_id = "2.9"
+test_set_id = "2.06"
 
 # User friendly name of the tests
 test_set_name = "Custom Ops"
